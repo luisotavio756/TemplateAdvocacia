@@ -74,7 +74,7 @@ body {
 }
 
 @media (min-width: 62em) {
-  .featurette-heading {
+  /* .featurette-heading {
     margin-top: 7rem;
-  }
+  } */
 }

@@ -1,2 +1,2 @@
-TEMPLATE EXAMPLE IS AVAILABLE IN https://template-advocacia.herokuapp.com/
+TEMPLATE EXAMPLE IS AVAILABLE IN https://templatebarber.herokuapp.com/
 

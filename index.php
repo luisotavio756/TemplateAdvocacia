@@ -13,7 +13,8 @@
 	<link rel="stylesheet" type="text/css" href="assets/plugins/fontawesome/css/all.css" />
 	<link rel="stylesheet" type="text/css" href="assets/plugins/fancybox/jquery.fancybox.css" />
 	<link rel="stylesheet" href="assets/plugins/owl-carousel/css/owl.carousel.min.css" />
-
+	<script src="assets/js/jquery.js"></script>
+	<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
 	<style type="text/css">
 		.list-news ul {
 			list-style: none;
@@ -137,10 +138,15 @@
 			.suspension-points{
 				display: none;
 			}
+
+			#quemsomos .img{
+				display: flex;
+				align-items: center;
+			}
 		}
 		
 		#banner{
-			background-image: url('assets/img/img2.jpg');
+			background-image: url('assets/img/banner2.jpg');
 			/* Full height */
 			height: 100%;
 
@@ -174,7 +180,13 @@
 			border: 1px solid gray;
 			border-radius: 10px;
 			padding: 10px;
+			/* box-shadow: 1px 1px 3px 0px gray; */
+		}
+
+		#parceiros .owl-carousel .owl-item:hover{
+			transition: all 0.4s;
 			box-shadow: 1px 1px 3px 0px gray;
+
 		}
 
 		#parceiros .owl-carousel .item{
@@ -186,6 +198,15 @@
 		#parceiros .list{
 			background-color: #333;
 			box-shadow: 1px 1px 10px 1px #6c757d;
+		}
+
+		#quemsomos img{
+			border-radius: 5px;
+    		box-shadow: 1px 1px 10px 1px #adb5bd;
+		}
+
+		#quemsomos .img{
+			/* height: 450px; */
 		}
 		
 
@@ -242,13 +263,36 @@
 			    </nav>
 			</div>
 		</div>
-		<div class="row" style="height: 100vh">
-			<div id="banner" class="w-100"></div>
+		<div class="row">
+			<div id="banner" class="w-100" style="height: 100vh"></div>
+		</div>
+		<div id="quemsomos" class="row">
+			<div class="col-lg-11 mx-auto mt-5 mb-2">
+				<div class="row">
+					<div class="col-lg-12 helper-align visible-desk">
+						<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Quem Somos</h3>
+						<div class="separator mt-1 helper-align"></div>
+					</div>
+					<div class="col-lg-12 helper-align visible-mob">
+						<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Quem Somos <i class="fas fa-stop div-block-rotate-2x"></i></h3>
+						<div class="separator mt-1 helper-align"></div>
+					</div>
+					<div class="col-lg-7 mt-4 my-lg-auto">
+						<h2 class="featurette-heading">HRA <span class="text-muted">Brasil</span></h2>
+						<p class="lead px-1">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+					</div>
+					<div class="col-lg-5 mt-4 img">
+						<a href="assets/img/img4.jpg" data-fancybox data-caption="Imagem">
+							<img src="assets/img/img4.jpg" class="img-fluid ">
+						</a>
+					</div>
+				</div>
+			</div><div class="col-11 mx-auto"><hr class="my-1"></div>
 		</div>
 		<div id="noticias" class="row">
-			<div class="col-lg-11 mx-auto">
+			<div class="col-lg-11 mx-auto mt-5 mb-3	">
 				<div class="row">
-					<div class="col-lg-7 pt-4 pt-lg-5">
+					<div class="col-lg-7">
 						<div class="row">
 							<div class="col-lg-12 helper-align visible-desk">
 								<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Notícias</h3>
@@ -261,13 +305,24 @@
 							<div class="col-lg-12 px-3 mt-3 carousel-news">
 								<div id="myCarousel-news" class="carousel slide carousel-fade w-100" data-ride="carousel">
 									<div class="carousel-inner">
-										<div class="carousel-item active" style="background-image: url('assets/img/img2.jpg');">
+										<div class="carousel-item active" style="background-image: url('assets/img/banner2.jpg');">
 											<div class="caption pl-2 pt-2">
 												Esta é uma breve descrição curta sobre a notícia acima informada... Clique e leia mais
 												<div class="separator w-75"></div>
 											</div>
 										</div>
-										<div class="carousel-item" style="background-image: url('assets/img/img1.jpg')"></div>
+										<div class="carousel-item" style="background-image: url('assets/img/img1.jpg');">
+											<div class="caption pl-2 pt-2">
+												Esta é uma breve descrição curta sobre a notícia acima informada... Clique e leia mais
+												<div class="separator w-75"></div>
+											</div>
+										</div>
+										<div class="carousel-item" style="background-image: url('assets/img/img3.jpg');">
+											<div class="caption pl-2 pt-2">
+												Esta é uma breve descrição curta sobre a notícia acima informada... Clique e leia mais
+												<div class="separator w-75"></div>
+											</div>
+										</div>
 									</div>
 								</div>
 									
@@ -279,7 +334,7 @@
 					</div>
 					<div class="col-lg-5">
 						<div class="row">
-							<div class="col-lg-12 px-1 pt-lg-5 mt-lg-5 list-news">
+							<div class="col-lg-12 px-1 pt-lg-5 list-news">
 								<ul class="px-1">
 									<a href="#">
 										<li>	
@@ -374,15 +429,33 @@
 				</div>
 			</div>
 		</div>
+		<div id="instagram" class="row">
+			<div class="col-lg-11 mx-auto py-3">
+				<div class="row">
+					<div class="col-lg-12 helper-align visible-desk">
+						<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Redes Socias</h3>
+						<div class="separator mt-1 helper-align"></div>
+					</div>
+					<div class="col-lg-12 helper-align visible-mob">
+						<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Redes Socias <i class="fas fa-stop div-block-rotate-2x"></i></h3>
+						<div class="separator mt-1 helper-align"></div>
+					</div>
+					<div class="col-lg-12 px-0 px-lg-5 mt-3 "> 
+						<iframe src="//lightwidget.com/widgets/3766dccb8ece5dc98a68ad03a0225dab.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+					</div>
+				</div>
+			</div>
+			
+		</div>
 		<div id="parceiros" class="row">
 			<div class="col-lg-11 mt-5 mx-auto">
 				<div class="row">
 					<div class="col-lg-12 helper-align visible-desk">
-						<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Nossos Parceiros</h3>
+						<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Nossos Associados</h3>
 						<div class="separator mt-1 helper-align"></div>
 					</div>
 					<div class="col-lg-12 helper-align visible-mob">
-						<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Nossos Parceiros <i class="fas fa-stop div-block-rotate-2x"></i></h3>
+						<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Nossos Associados <i class="fas fa-stop div-block-rotate-2x"></i></h3>
 						<div class="separator mt-1 helper-align"></div>
 					</div>
 				</div>
@@ -493,9 +566,10 @@
 		<div class="row">
 			<div class="col-lg-12" style="min-height: 350px; background-color: #222; box-shadow: 2px 0px 5px #e9ecef; color: white">
 				<div class="row" style="min-height: 300px">
-					<div class="col-lg-3  px-4">
+					<div class="col-lg-3 px-4 py-5">
 						<div class="logo text-center">
-							<img  src="assets/img/logo.png" width="150" height="90" class="img-fluid">
+							<!-- <img  src="assets/img/logo.png" width="150" height="90" class="img-fluid"> -->
+							<h1>Logo</h1>
 						</div>
 						
 						<p class="text-justify text-muted-footer mt-0" style="font-weight: 500">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -572,7 +646,7 @@
 		</div>
 	</div>
 </div>
-	<script src="assets/js/jquery.js"></script>
+	
 	<script src="assets/bootstrap/js/bootstrap.js"></script>
 	<script src="assets/js/popper.min.js"></script>
 	<script src="assets/js/main.js"></script>
@@ -581,6 +655,7 @@
 	<script src="assets/plugins/fontawesome/js/all.js"></script>
 	<script src="assets/plugins/owl-carousel/js/owl.carousel.js"></script>
 	<script type="text/javascript">
+	
 		
 
 		$('.owl-carousel').owlCarousel({
