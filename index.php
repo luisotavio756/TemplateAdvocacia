@@ -157,13 +157,13 @@
 		}
 
 		#contato button{
-			color: #ce9c6b;
-			font-weight: 600;
+			color: #009BA4 !important;
+			/* font-weight: 600; */
 		}
 
-		#contato label{
-			color: #ce9c6b;
-		}
+		/* #contato label{
+			color: #343a40 !important;
+		} */
 
 		#parceiros img{
 			width: 150px !important;
@@ -196,8 +196,18 @@
 		}
 
 		#parceiros .list{
-			background-color: #333;
+			background-color: rgb(38, 51, 60);
 			box-shadow: 1px 1px 10px 1px #6c757d;
+		}
+
+		#parceiros .list .text {
+			color: #fff;
+			text-align: justify;
+			font-size: 1.2rem;
+		}
+
+		#parceiros .list h1{
+			color: #02B9B9;
 		}
 
 		#quemsomos img{
@@ -208,7 +218,131 @@
 		#quemsomos .img{
 			/* height: 450px; */
 		}
+
+		.text-header {
+			font-weight: 700;
+		}
 		
+		.subtitle-line {
+			height: 3px;
+			width: 25%;
+			color: #009BA4;
+			background-color: #009BA4;
+			border-style: solid !important;
+			margin-top: 0 !important;
+			margin-bottom: 0 !important;
+			border: initial !important;
+			border-radius: 5px;
+		}
+
+		.font-gray {
+			color: #6D6D6D;
+		}
+
+		.lead {
+			text-align: justify;
+		}
+
+		.lead b {
+			font-weight: 700;
+		}
+
+		.lead .sublime {
+			font-weight: bold; 
+			border-bottom: 2px solid #009BA4;
+		}
+
+		/* COMPROMISSOS */
+		#compromissos {
+			background-color: #eeeeee;
+		}
+
+		#compromissos .list {
+			list-style: none;
+			text-align: justify;
+		}
+
+		#compromissos .list li {
+			margin: 20px 0;
+			font-size: 1.20rem !important;
+		}
+
+		#compromissos .list li svg {
+			color: #009BA4;
+			font-size: 10px !important;
+			vertical-align: baseline;
+		}
+
+		/* PILARES */
+		#pilares {
+			background-color: rgb(38, 51, 60);
+		}
+
+		#pilares svg {
+			color: white !important;
+		}
+
+		#pilares .text {
+			color: #02B9B9;
+			text-align: justify;
+			font-size: 1.2rem;
+		}
+
+		#pilares .text span {
+			font-weight: 700;
+			color: #83F9F6;
+		}
+
+
+		/* SERVIÇOS */
+		#servicos .card-service {
+
+			margin: 10px;
+			border: 1px solid #dcdcdc;
+			border-radius: 10px;
+			box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+			padding: 20px;
+			cursor: pointer;
+		}
+
+
+		#servicos .card-service img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		#servicos .card-service .overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			transition: .5s ease;
+			background-color: #02B9B9;
+		}
+
+		#servicos .card-service:hover .overlay {
+			opacity: 1;
+			border-radius: 10px;
+		}
+
+		#servicos .card-service .text {
+			width: 100%;
+			color: white;
+			font-size: 1.1rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			text-align: justify;
+			padding: 5px;
+		}
 
 	</style>
 </head>
@@ -264,32 +398,169 @@
 			</div>
 		</div>
 		<div class="row">
-			<div id="banner" class="w-100" style="height: 100vh"></div>
+			<div class="col-12 px-0">
+				<div id="banner" style="height: 100vh"></div>
+			</div>
 		</div>
 		<div id="quemsomos" class="row">
-			<div class="col-lg-11 mx-auto mt-5 mb-2">
+			<div class="col-lg-11 mx-auto my-5">
 				<div class="row">
-					<div class="col-lg-12 helper-align visible-desk">
-						<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Quem Somos</h3>
-						<div class="separator mt-1 helper-align"></div>
+					<div class="col-lg-12 text-center">
+						<h3 class="text-header">SOBRE NÓS</h3>
+						<hr class="subtitle-line">
 					</div>
-					<div class="col-lg-12 helper-align visible-mob">
-						<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Quem Somos <i class="fas fa-stop div-block-rotate-2x"></i></h3>
-						<div class="separator mt-1 helper-align"></div>
-					</div>
-					<div class="col-lg-7 mt-4 my-lg-auto">
-						<h2 class="featurette-heading">HRA <span class="text-muted">Brasil</span></h2>
-						<p class="lead px-1">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-					</div>
-					<div class="col-lg-5 mt-4 img">
-						<a href="assets/img/img4.jpg" data-fancybox data-caption="Imagem">
-							<img src="assets/img/img4.jpg" class="img-fluid ">
-						</a>
+					<div class="col-lg-12 mt-4">
+						<div class="row">
+							<div class="col-lg-7 my-lg-4">
+								<!-- <h2 class="featurette-heading">HRA <span class="text-muted">Brasil</span></h2> -->
+								<p class="lead font-gray px-1">A <b>HRA Brasil</b> é uma empresa fundada em 2015 na cidade de fortaleza e que <span class="sublime">já tem mais de 4 anos de mercados com spanns dos melhores números em nossa área</span>, surgimos com o intuito de ajudar pessoas com dificuldades de gerenciar seus negócios. Então, a <b>HRA Brasil</b> surgiu no ramo de consultoria para gestão e desenvolvimeto do seu negócio.</p>
+							</div>
+							<div class="col-lg-5 img">
+								<a href="assets/img/img4.jpg" data-fancybox data-caption="Imagem">
+									<img src="assets/img/img4.jpg" class="img-fluid ">
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div><div class="col-11 mx-auto"><hr class="my-1"></div>
+			</div>
+			<div class="col-lg-12 paralax-divisor"></div>
 		</div>
-		<div id="noticias" class="row">
+		<div id="compromissos" class="row">
+			<div class="col-lg-11 mx-auto my-5 py-3">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h3 class="text-header">NOSSOS COMPROMISSOS</h3>
+						<hr class="subtitle-line">
+					</div>
+					<div class="col-lg-10 mx-auto mt-5">
+						<ul class="list px-1 px-lg-4">
+							<li>
+								<i class="fas fa-circle"></i>
+								Buscamos soluções inteligentes para acolher as necessidades dos clientes com estratégias empresariais inovadoras. 
+							</li>
+							<li>
+								<i class="fas fa-circle"></i>
+								Buscamos soluções inteligentes para acolher as necessidades dos clientes com estratégias empresariais inovadoras. 
+							</li>
+							<li>
+								<i class="fas fa-circle"></i>
+								Buscamos soluções inteligentes para acolher as necessidades dos clientes com estratégias empresariais inovadoras. 
+							</li>
+							<li>
+								<i class="fas fa-circle"></i>
+								Buscamos soluções inteligentes para acolher as necessidades dos clientes com estratégias empresariais inovadoras. 
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="col-lg-12 paralax-divisor"></div> -->
+		</div>
+		<div id="pilares" class="row">
+			<div class="col-lg-11 mx-auto my-5 py-3">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h3 class="text-header title">NOSSOS PILARES</h3>
+						<hr class="subtitle-line">
+					</div>
+					<div class="col-lg-12 mt-3">
+						<div class="row">
+							<div class="col-lg-4 text-center py-3">
+								<h4 class="title">INOVAÇÃO</h4>
+								<i class="far fa-lightbulb fa-10x"></i>
+								<p class="text px-3 mt-3">Assistência com foco no sucesso do empreendimento do cliente.</span>
+                                </p>
+							</div>
+							<div class="col-lg-4 text-center py-3">
+								<h4 class="title">VISÃO</h4>
+								<i class="far fa-eye fa-10x"></i>
+								<p class="text px-3 mt-3">Vontade e determinação de ir além do comum e conseguir alcançar patamares sempre maiores.</p>
+							</div>
+							<div class="col-lg-4 text-center py-3">
+								<h4 class="title">RESULTADO</h4>
+								<i class="fas fa-chart-line fa-10x"></i>
+								<p class="text px-3 mt-3">Garantia de resultados postivos e sempre melhorias no âmbito consultorial.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="servicos" class="row">
+			<div class="col-lg-11 mx-auto my-5 py-3">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h3 class="text-header">NOSSOS SERVIÇOS</h3>
+						<hr class="subtitle-line">
+					</div>
+					<div class="col-lg-12 mt-3">
+						<div class="row">
+							<div class="col card-service text-center py-3">
+								<i class="far fa-lightbulb fa-10x"></i>
+								<h4 class="mt-4">INOVAÇÃO</h4>
+								<div class="overlay">
+									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
+								</div>
+							</div>
+							<div class="col card-service text-center py-3">
+								<i class="far fa-lightbulb fa-10x"></i>
+								<h4 class="mt-4">INOVAÇÃO</h4>
+								<div class="overlay">
+									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
+								</div>
+							</div>
+							<div class="col card-service text-center py-3">
+								<i class="far fa-lightbulb fa-10x"></i>
+								<h4 class="mt-4">INOVAÇÃO</h4>
+								<div class="overlay">
+									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
+								</div>
+							</div>
+							<div class="col card-service text-center py-3">
+								<i class="far fa-lightbulb fa-10x"></i>
+								<h4 class="mt-4">INOVAÇÃO</h4>
+								<div class="overlay">
+									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col card-service text-center py-3">
+								<i class="far fa-lightbulb fa-10x"></i>
+								<h4 class="mt-4">INOVAÇÃO</h4>
+								<div class="overlay">
+									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
+								</div>
+							</div>
+							<div class="col card-service text-center py-3">
+								<i class="far fa-lightbulb fa-10x"></i>
+								<h4 class="mt-4">INOVAÇÃO</h4>
+								<div class="overlay">
+									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
+								</div>
+							</div>
+							<div class="col card-service text-center py-3">
+								<i class="far fa-lightbulb fa-10x"></i>
+								<h4 class="mt-4">INOVAÇÃO</h4>
+								<div class="overlay">
+									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
+								</div>
+							</div>
+							<div class="col card-service text-center py-3">
+								<i class="far fa-lightbulb fa-10x"></i>
+								<h4 class="mt-4">INOVAÇÃO</h4>
+								<div class="overlay">
+									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div id="noticias" class="row">
 			<div class="col-lg-11 mx-auto mt-5 mb-3	">
 				<div class="row">
 					<div class="col-lg-7">
@@ -370,17 +641,62 @@
 					</div>	
 				</div>
 			</div>										
+		</div> -->
+		<div id="parceiros" class="row">
+			<div class="col-lg-12 py-5 list">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h3 class="text-header title">NOSSOS ASSOCIADOS</h3>
+						<hr class="subtitle-line">
+					</div>
+				</div>
+				<!-- <h1 class="text-center mt-0" ><i class="far fa-handshake fa-2x"></i></h1> -->
+				<p class="text-center text mt-0">Estes são nossos fieis parceiros que nos ajudam a manter o projeto e impactar a sociedade !</p>
+				<div class="owl-carousel owl-theme mt-4">
+					<a href="assets/img/parceiro1.png" data-fancybox='galery' data-caption="Imagem">
+						<div class="item">
+							<img src="assets/img/parceiro1.png" width="50" class="mx-auto">
+						</div>
+					</a>
+					
+					<a href="assets/img/parceiro3.png" data-fancybox='galery' data-caption="Imagem">
+						<div class="item">
+							<img src="assets/img/parceiro3.png" width="50" class="mx-auto">
+						</div>
+					</a>
+					<a href="assets/img/parceiro4.png" data-fancybox='galery' data-caption="Imagem">
+						<div class="item">
+							<img src="assets/img/parceiro4.png" width="50" class="mx-auto">
+						</div>
+					</a>
+					<a href="assets/img/parceiro2.png" data-fancybox='galery' data-caption="Imagem">
+						<div class="item">
+							<img src="assets/img/parceiro2.png" width="50" class="mx-auto">
+						</div>
+					</a>
+				</div>	
+			</div>	
+		</div>
+		<div id="instagram" class="row">
+			<div class="col-lg-11 mx-auto py-5">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h3 class="text-header">VEJA-NOS NO INSTAGRAM</h3>
+						<hr class="subtitle-line">
+					</div>
+					<div class="col-lg-12 px-0 px-lg-5 mt-3 "> 
+						<iframe src="//lightwidget.com/widgets/3766dccb8ece5dc98a68ad03a0225dab.html" scrolling="no" allowtransparency="true" class="lightwidget-widget visible-desk" style="width:100%;border:0;overflow:hidden;"></iframe>
+						<iframe src="//lightwidget.com/widgets/657fd50e70b4542a8f28b7f80754e9b4.html" scrolling="no" allowtransparency="true" class="lightwidget-widget visible-mob" style="width:100%;border:0;overflow:hidden;"></iframe>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div id="contato" class="row paralax">
-			<div class="col-lg-11 mx-auto py-5" style="min-height: 550px !important">
+			<div class="col-lg-11 mx-auto py-5 form-contato">
 				<div class="row">
-					<div class="col-lg-12 helper-align visible-desk">
-						<h3 class="my-auto title"><i class="fas fa-stop div-block-rotate-2x"></i> Contato</h3>
-						<div class="separator mt-1 helper-align"></div>
-					</div>
-					<div class="col-lg-12 helper-align visible-mob">
-						<h3 class="my-auto title"><i class="fas fa-stop div-block-rotate-2x"></i> Contato <i class="fas fa-stop div-block-rotate-2x"></i></h3>
-						<div class="separator mt-1 helper-align"></div>
+					<div class="col-lg-12 text-center">
+						<h3 class="text-header title">CONTATO</h3>
+						<hr class="subtitle-line">
 					</div>
 					<form autocomplete="off" class="col-lg-12 mt-3" action="" method="POST">
 						<div class="row px-lg-3">
@@ -428,65 +744,6 @@
 					</form>
 				</div>
 			</div>
-		</div>
-		<div id="instagram" class="row">
-			<div class="col-lg-11 mx-auto py-3">
-				<div class="row">
-					<div class="col-lg-12 helper-align visible-desk">
-						<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Redes Socias</h3>
-						<div class="separator mt-1 helper-align"></div>
-					</div>
-					<div class="col-lg-12 helper-align visible-mob">
-						<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Redes Socias <i class="fas fa-stop div-block-rotate-2x"></i></h3>
-						<div class="separator mt-1 helper-align"></div>
-					</div>
-					<div class="col-lg-12 px-0 px-lg-5 mt-3 "> 
-						<iframe src="//lightwidget.com/widgets/3766dccb8ece5dc98a68ad03a0225dab.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-		<div id="parceiros" class="row">
-			<div class="col-lg-11 mt-5 mx-auto">
-				<div class="row">
-					<div class="col-lg-12 helper-align visible-desk">
-						<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Nossos Associados</h3>
-						<div class="separator mt-1 helper-align"></div>
-					</div>
-					<div class="col-lg-12 helper-align visible-mob">
-						<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Nossos Associados <i class="fas fa-stop div-block-rotate-2x"></i></h3>
-						<div class="separator mt-1 helper-align"></div>
-					</div>
-				</div>
-			</div>	
-			<div class="col-lg-12 my-3 pt-4 pb-5 list">
-				<h1 class="text-center title mt-0 c-marron" style="font-size: 4rem;"><i class="far fa-handshake"></i></h1>
-				<p class="text-center title mt-0">Estes são nossos fieis parceiros que nos ajudam a manter o projeto e impactar a sociedade !</p>
-				<div class="owl-carousel owl-theme">
-					<a href="assets/img/parceiro1.png" data-fancybox='galery' data-caption="Imagem">
-						<div class="item">
-							<img src="assets/img/parceiro1.png" width="50" class="mx-auto">
-						</div>
-					</a>
-					
-					<a href="assets/img/parceiro3.png" data-fancybox='galery' data-caption="Imagem">
-						<div class="item">
-							<img src="assets/img/parceiro3.png" width="50" class="mx-auto">
-						</div>
-					</a>
-					<a href="assets/img/parceiro4.png" data-fancybox='galery' data-caption="Imagem">
-						<div class="item">
-							<img src="assets/img/parceiro4.png" width="50" class="mx-auto">
-						</div>
-					</a>
-					<a href="assets/img/parceiro2.png" data-fancybox='galery' data-caption="Imagem">
-						<div class="item">
-							<img src="assets/img/parceiro2.png" width="50" class="mx-auto">
-						</div>
-					</a>
-				</div>	
-			</div>	
 		</div>
 		<!-- 
 		<div id="servicos" class="row services" style="min-height: 450px;">
