@@ -13,79 +13,30 @@
 	<link rel="stylesheet" type="text/css" href="assets/plugins/fontawesome/css/all.css" />
 	<link rel="stylesheet" type="text/css" href="assets/plugins/fancybox/jquery.fancybox.css" />
 	<link rel="stylesheet" href="assets/plugins/owl-carousel/css/owl.carousel.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 	<script src="assets/js/jquery.js"></script>
 	<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<style type="text/css">
-		.list-news ul {
-			list-style: none;
-			
+		body{
+			/* background: #eeeeee !important; */
+			font-family: 'Roboto Condensed', sans-serif !important;
 		}
 
-		.list-news li {
-			font-size: 15px;
-			font-weight: 600;
-			padding: .5rem .5rem;
-			margin: .7rem 0;
-			border-left: 3px solid #333;
-			border-radius: 2px;
+		button, a.btn {
+			border-radius: 120px !important;
+			transition: all 0.2s;
 		}
 
-		.list-news a:hover{
-			transition: all 0.5s;
-			color: #ce9c6b;
+		button:hover, a.btn:hover{
+			box-shadow: 0px 0px 2px 1px #009ba4;
 		}
 
-		.separator{
-			width: 50%;
-			height: 2px;
-			background-color: #dcdcdc;
-			border-radius: 5px;
-		}
-
-		.link-text{
-			font-size: 1.1rem;
-
-		}
-
-		.link-text:hover{
-			transition: all 0.4s;
-			color: #ce9c6b;
-			text-decoration: underline;
-			
-		}
-		/* #myCarousel-news{
-			height: 400px;
-		} */
-
-		#myCarousel-news .carousel-item .caption{
-			font-size: 1.1rem;
-			font-weight: 700;
-		}
-
-		#myCarousel-news .carousel-item .caption .separator{
-			height: 3px !important;
-		}
-
-		#myCarousel-news .carousel-item .caption, #myCarousel-news .carousel-item .caption .separator{
-			color: white;
-		}
-
-		#myCarousel-news .carousel-item{
-			width: 100%;
-			height: auto;
-			/* Center and scale the image nicely */
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-
-		}
-
-		.suspension-points{
-			color: #ce9c6b;
-		}
-
-		.suspension-points {
-			font-size: .8rem;
+		p, h3, h4, li {
+			font-weight: lighter;
 		}
 
 		@media screen and (max-width: 992px) {
@@ -97,23 +48,9 @@
 				display: none;
 			}
 
-			.helper-align{
-				text-align: center !important;
-				margin-left: auto !important;
-				margin-right: auto !important;
-			}
-			.link-text{
-				text-align: center !important;
-				padding-right: 0 !important;
-			}
-
-			.carousel-news{
-				padding-right: 0px !important;
-				padding-left: 0px !important;
-			}
-
-			.suspension-points{
-				display: block;
+			.banner .img{
+				height: auto; 
+				width: 100%;
 			}
 		}
 
@@ -126,224 +63,89 @@
 				display: block;
 			}
 
-			#myCarousel-news .carousel-item{
-				border-radius: 3px
+			#pilares .br{
+				border-right: 1px solid rgba(255, 255, 255, 0.5);
 			}
 
-			.carousel-news{
-				padding-right: 1rem !important;
-				padding-left: 1rem !important;
-			}
-
-			.suspension-points{
-				display: none;
-			}
-
-			#quemsomos .img{
-				display: flex;
-				align-items: center;
+			.banner .img {
+				height: 90vh; 
+				width: 100%;
+				/* Center and scale the image nicely */
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
 			}
 		}
-		
-		#banner{
-			background-image: url('assets/img/banner2.jpg');
-			/* Full height */
-			height: 100%;
 
-			/* Center and scale the image nicely */
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-
-		#contato button{
-			color: #009BA4 !important;
-			/* font-weight: 600; */
-		}
 
 		/* #contato label{
 			color: #343a40 !important;
 		} */
 
-		#parceiros img{
-			width: 150px !important;
-			height: auto !important;
-		}
-
-		#parceiros .owl-carousel .owl-stage{
-			display: flex;
-			align-items: center;
-		}
-
-		#parceiros .owl-carousel .owl-item{
-			align-self: normal;
-			border: 1px solid gray;
-			border-radius: 10px;
-			padding: 10px;
-			/* box-shadow: 1px 1px 3px 0px gray; */
-		}
-
-		#parceiros .owl-carousel .owl-item:hover{
-			transition: all 0.4s;
-			box-shadow: 1px 1px 3px 0px gray;
-
-		}
-
-		#parceiros .owl-carousel .item{
-			height: 100%;
-			display: flex;
-			align-items: center;
-		}
-
-		#parceiros .list{
-			background-color: rgb(38, 51, 60);
-			box-shadow: 1px 1px 10px 1px #6c757d;
-		}
-
-		#parceiros .list .text {
-			color: #fff;
-			text-align: justify;
-			font-size: 1.2rem;
-		}
-
-		#parceiros .list h1{
-			color: #02B9B9;
-		}
-
-		#quemsomos img{
-			border-radius: 5px;
-    		box-shadow: 1px 1px 10px 1px #adb5bd;
-		}
-
-		#quemsomos .img{
-			/* height: 450px; */
-		}
-
-		.text-header {
-			font-weight: 700;
-		}
-		
-		.subtitle-line {
-			height: 3px;
-			width: 25%;
-			color: #009BA4;
-			background-color: #009BA4;
-			border-style: solid !important;
-			margin-top: 0 !important;
-			margin-bottom: 0 !important;
-			border: initial !important;
-			border-radius: 5px;
-		}
-
-		.font-gray {
-			color: #6D6D6D;
-		}
-
-		.lead {
-			text-align: justify;
-		}
-
-		.lead b {
-			font-weight: 700;
-		}
-
-		.lead .sublime {
-			font-weight: bold; 
-			border-bottom: 2px solid #009BA4;
-		}
-
-		/* COMPROMISSOS */
-		#compromissos {
-			background-color: #eeeeee;
-		}
-
-		#compromissos .list {
-			list-style: none;
-			text-align: justify;
-		}
-
-		#compromissos .list li {
-			margin: 20px 0;
-			font-size: 1.20rem !important;
-		}
-
-		#compromissos .list li svg {
-			color: #009BA4;
-			font-size: 10px !important;
-			vertical-align: baseline;
-		}
-
-		/* PILARES */
-		#pilares {
-			background-color: rgb(38, 51, 60);
-		}
-
-		#pilares svg {
-			color: white !important;
-		}
-
-		#pilares .text {
-			color: #02B9B9;
-			text-align: justify;
-			font-size: 1.2rem;
-		}
-
-		#pilares .text span {
-			font-weight: 700;
-			color: #83F9F6;
-		}
 
 
-		/* SERVIÇOS */
-		#servicos .card-service {
-
-			margin: 10px;
-			border: 1px solid #dcdcdc;
-			border-radius: 10px;
-			box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
-			padding: 20px;
-			cursor: pointer;
-		}
-
-
-		#servicos .card-service img {
-			display: block;
-			width: 100%;
-			height: auto;
-		}
-
-		#servicos .card-service .overlay {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			height: 100%;
-			width: 100%;
-			opacity: 0;
-			transition: .5s ease;
-			background-color: #02B9B9;
-		}
-
-		#servicos .card-service:hover .overlay {
-			opacity: 1;
-			border-radius: 10px;
-		}
-
-		#servicos .card-service .text {
-			width: 100%;
+		#img{
 			color: white;
-			font-size: 1.1rem;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-webkit-transform: translate(-50%, -50%);
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			text-align: justify;
-			padding: 5px;
 		}
 
+		#img .img{
+			/* The image used */
+			background-image: linear-gradient(#009ba4, #070e13), url("assets/img/chart.jpg");
+			background-blend-mode: multiply;
+			width: 100%;
+			height: 400px;
+
+			/* background-attachment: fixed; */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			/* border-radius: 10px; */
+			box-shadow: 1px 3px 15px 5px #495057;
+			/* color: white; */
+		}
+		#img a.btn{
+			background-color: transparent !important;
+		}
+
+		#img a.btn{
+			border: 2px solid #009ba4;
+			color: white;
+		}
+
+		#img p svg{
+			color: #009ba4;
+		}
+
+		#footer .block{
+			min-height: 350px; 
+			background-color: #222; 
+			/* box-shadow: 2px 0px 5px #e9ecef;  */
+			color: white;
+		}
+
+		#footer h4{
+			color: #009ba4;
+			font-weight: normal;
+		}
+
+		#footer a, #footer p{
+			font-weight: lighter;
+			transition: all 0.2s;
+		}
+
+		#footer a:hover, #footer p:hover{
+			color: #009ba4;
+		}
+
+		#footer .copy{
+			height: 50px;
+			color: #009ba4;
+			display: flex;
+			background-color: #09090963;
+			align-items: center; 
+			justify-content: center;
+			font-weight: bold;
+		}
 	</style>
 </head>
 <body>
@@ -363,32 +165,28 @@
 							<a class="nav-link scrollsuave" href="#servicos"><div class="div-nav"></div>Notícias</a>
 						</li>
 						<li class="nav-item position-relative px-1">
-							<a class="nav-link scrollsuave" href="#clientes"><div class="div-nav"></div>Imóveis</a>
-						</li>
-						<li class="nav-item position-relative px-1">
 							<a class="nav-link scrollsuave" href="#quemsomos"><div class="div-nav"></div>Quem Somos <i class="fas fa-angle-down pt-1"></i></a>
 						</li>
 						<li class="nav-item position-relative px-1">
-							<a class="nav-link scrollsuave" href="#contato"><div class="div-nav"></div>Mídia</a>
+							<a class="nav-link scrollsuave" href="#contato"><div class="div-nav"></div>Contato</a>
 						</li>
 					</ul>
 				</div>
 			</nav>
 			<div id="mob-sidenav" class="sidenav">
-			    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i style="font-size: 22px" class="fas fa-chevron-circle-right"></i></a>
+				<a href="javascript:void(0)" class="closebtn btn" onclick="closeNav()">
+					<i class="fas fa-chevron-right"></i>
+				</a>
 			    <nav class="h-100" style="display: flex; align-items: center; justify-content: center;">
 			        <ul class="navbar-nav w-100">
 						<li class="nav-item w-75 position-relative px-1">
 							<a class="nav-link text-center scrollsuave" href="#" href=""><div class="div-mob"></div>Home</a>
 						</li>
 						<li class="nav-item w-75 position-relative px-1">
+							<a class="nav-link text-center scrollsuave" href="#servicos" href=""><div class="div-mob"></div>Noticias</a>
+						</li>
+						<li class="nav-item w-75 position-relative px-1">
 							<a class="nav-link text-center scrollsuave" href="#quemsomos" href=""><div class="div-mob"></div>Quem Somos</a>
-						</li>
-						<li class="nav-item w-75 position-relative px-1">
-							<a class="nav-link text-center scrollsuave" href="#servicos" href=""><div class="div-mob"></div>Serviços</a>
-						</li>
-						<li class="nav-item w-75 position-relative px-1">
-							<a class="nav-link text-center scrollsuave" href="#clientes" href=""><div class="div-mob"></div>Clientes</a>
 						</li>
 						<li class="nav-item w-75 position-relative px-1">
 							<a class="nav-link text-center scrollsuave" href="#contato" href=""><div class="div-mob"></div>Contato</a>
@@ -398,286 +196,249 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-12 px-0">
-				<div id="banner" style="height: 100vh"></div>
-			</div>
-		</div>
-		<div id="quemsomos" class="row">
-			<div class="col-lg-11 mx-auto my-5">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h3 class="text-header">SOBRE NÓS</h3>
-						<hr class="subtitle-line">
-					</div>
-					<div class="col-lg-12 mt-4">
-						<div class="row">
-							<div class="col-lg-7 my-lg-4">
-								<!-- <h2 class="featurette-heading">HRA <span class="text-muted">Brasil</span></h2> -->
-								<p class="lead font-gray px-1">A <b>HRA Brasil</b> é uma empresa fundada em 2015 na cidade de fortaleza e que <span class="sublime">já tem mais de 4 anos de mercados com spanns dos melhores números em nossa área</span>, surgimos com o intuito de ajudar pessoas com dificuldades de gerenciar seus negócios. Então, a <b>HRA Brasil</b> surgiu no ramo de consultoria para gestão e desenvolvimeto do seu negócio.</p>
-							</div>
-							<div class="col-lg-5 img">
-								<a href="assets/img/img4.jpg" data-fancybox data-caption="Imagem">
-									<img src="assets/img/img4.jpg" class="img-fluid ">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-12 paralax-divisor"></div>
-		</div>
-		<div id="compromissos" class="row">
-			<div class="col-lg-11 mx-auto my-5 py-3">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h3 class="text-header">NOSSOS COMPROMISSOS</h3>
-						<hr class="subtitle-line">
-					</div>
-					<div class="col-lg-10 mx-auto mt-5">
-						<ul class="list px-1 px-lg-4">
-							<li>
-								<i class="fas fa-circle"></i>
-								Buscamos soluções inteligentes para acolher as necessidades dos clientes com estratégias empresariais inovadoras. 
-							</li>
-							<li>
-								<i class="fas fa-circle"></i>
-								Buscamos soluções inteligentes para acolher as necessidades dos clientes com estratégias empresariais inovadoras. 
-							</li>
-							<li>
-								<i class="fas fa-circle"></i>
-								Buscamos soluções inteligentes para acolher as necessidades dos clientes com estratégias empresariais inovadoras. 
-							</li>
-							<li>
-								<i class="fas fa-circle"></i>
-								Buscamos soluções inteligentes para acolher as necessidades dos clientes com estratégias empresariais inovadoras. 
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- <div class="col-lg-12 paralax-divisor"></div> -->
-		</div>
-		<div id="pilares" class="row">
-			<div class="col-lg-11 mx-auto my-5 py-3">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h3 class="text-header title">NOSSOS PILARES</h3>
-						<hr class="subtitle-line">
-					</div>
-					<div class="col-lg-12 mt-3">
-						<div class="row">
-							<div class="col-lg-4 text-center py-3">
-								<h4 class="title">INOVAÇÃO</h4>
-								<i class="far fa-lightbulb fa-10x"></i>
-								<p class="text px-3 mt-3">Assistência com foco no sucesso do empreendimento do cliente.</span>
-                                </p>
-							</div>
-							<div class="col-lg-4 text-center py-3">
-								<h4 class="title">VISÃO</h4>
-								<i class="far fa-eye fa-10x"></i>
-								<p class="text px-3 mt-3">Vontade e determinação de ir além do comum e conseguir alcançar patamares sempre maiores.</p>
-							</div>
-							<div class="col-lg-4 text-center py-3">
-								<h4 class="title">RESULTADO</h4>
-								<i class="fas fa-chart-line fa-10x"></i>
-								<p class="text px-3 mt-3">Garantia de resultados postivos e sempre melhorias no âmbito consultorial.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="servicos" class="row">
-			<div class="col-lg-11 mx-auto my-5 py-3">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h3 class="text-header">NOSSOS SERVIÇOS</h3>
-						<hr class="subtitle-line">
-					</div>
-					<div class="col-lg-12 mt-3">
-						<div class="row">
-							<div class="col card-service text-center py-3">
-								<i class="far fa-lightbulb fa-10x"></i>
-								<h4 class="mt-4">INOVAÇÃO</h4>
-								<div class="overlay">
-									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
-								</div>
-							</div>
-							<div class="col card-service text-center py-3">
-								<i class="far fa-lightbulb fa-10x"></i>
-								<h4 class="mt-4">INOVAÇÃO</h4>
-								<div class="overlay">
-									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
-								</div>
-							</div>
-							<div class="col card-service text-center py-3">
-								<i class="far fa-lightbulb fa-10x"></i>
-								<h4 class="mt-4">INOVAÇÃO</h4>
-								<div class="overlay">
-									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
-								</div>
-							</div>
-							<div class="col card-service text-center py-3">
-								<i class="far fa-lightbulb fa-10x"></i>
-								<h4 class="mt-4">INOVAÇÃO</h4>
-								<div class="overlay">
-									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col card-service text-center py-3">
-								<i class="far fa-lightbulb fa-10x"></i>
-								<h4 class="mt-4">INOVAÇÃO</h4>
-								<div class="overlay">
-									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
-								</div>
-							</div>
-							<div class="col card-service text-center py-3">
-								<i class="far fa-lightbulb fa-10x"></i>
-								<h4 class="mt-4">INOVAÇÃO</h4>
-								<div class="overlay">
-									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
-								</div>
-							</div>
-							<div class="col card-service text-center py-3">
-								<i class="far fa-lightbulb fa-10x"></i>
-								<h4 class="mt-4">INOVAÇÃO</h4>
-								<div class="overlay">
-									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
-								</div>
-							</div>
-							<div class="col card-service text-center py-3">
-								<i class="far fa-lightbulb fa-10x"></i>
-								<h4 class="mt-4">INOVAÇÃO</h4>
-								<div class="overlay">
-									<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quidem totam modi aliquam amet voluptate recusandae explicabo praesentium dignissimos ut quisquam ipsum, repellat, a debitis est porro corporis quaerat?</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- <div id="noticias" class="row">
-			<div class="col-lg-11 mx-auto mt-5 mb-3	">
-				<div class="row">
-					<div class="col-lg-7">
-						<div class="row">
-							<div class="col-lg-12 helper-align visible-desk">
-								<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Notícias</h3>
-								<div class="separator mt-1 helper-align"></div>
-							</div>
-							<div class="col-lg-12 helper-align visible-mob">
-								<h3 class="my-auto"><i class="fas fa-stop div-block-rotate-2x"></i> Notícias <i class="fas fa-stop div-block-rotate-2x"></i></h3>
-								<div class="separator mt-1 helper-align"></div>
-							</div>
-							<div class="col-lg-12 px-3 mt-3 carousel-news">
-								<div id="myCarousel-news" class="carousel slide carousel-fade w-100" data-ride="carousel">
-									<div class="carousel-inner">
-										<div class="carousel-item active" style="background-image: url('assets/img/banner2.jpg');">
-											<div class="caption pl-2 pt-2">
-												Esta é uma breve descrição curta sobre a notícia acima informada... Clique e leia mais
-												<div class="separator w-75"></div>
-											</div>
+			<div class="col-12 px-0 banner">
+				<img src="assets/img/banner2.jpg" alt="" class="img">
+				<!-- <div class="teste visible-desk">
+					<div id="pilares-one" class="row">
+						<div class="col-lg-11 mx-auto py-2 text-light">
+							<div class="row">
+								<div class="col-lg-12 px-0">
+									<div class="row">
+										<div class="col text-center py-3 px-0" style="border-right: 1px solid rgba(255, 255, 255, 0.5)" data-aos="fade-right">
+											<h4 class="title text-uppercase">Missão</h4>
+											<i class="far fa-lightbulb fa-5x"></i>
+											<p class="text px-3 mt-3">Assistência com foco no sucesso do empreendimento do cliente.</span>
+											</p>
 										</div>
-										<div class="carousel-item" style="background-image: url('assets/img/img1.jpg');">
-											<div class="caption pl-2 pt-2">
-												Esta é uma breve descrição curta sobre a notícia acima informada... Clique e leia mais
-												<div class="separator w-75"></div>
-											</div>
+										<div class="col text-center py-3 px-0" style="border-right: 1px solid rgba(255, 255, 255, 0.5)" data-aos="fade-right">
+											<h4 class="title text-uppercase">Visão</h4>
+											<i class="far fa-eye fa-5x"></i>
+											<p class="text px-3 mt-3">Vontade e determinação de ir além do comum e conseguir alcançar patamares sempre maiores.</p>
 										</div>
-										<div class="carousel-item" style="background-image: url('assets/img/img3.jpg');">
-											<div class="caption pl-2 pt-2">
-												Esta é uma breve descrição curta sobre a notícia acima informada... Clique e leia mais
-												<div class="separator w-75"></div>
-											</div>
+										<div class="col text-center py-3 px-0" data-aos="fade-right">
+											<h4 class="title text-uppercase">Valores</h4>
+											<i class="fas fa-chart-line fa-5x"></i>
+											<p class="text px-3 mt-3">Garantia de resultados postivos e sempre melhorias no âmbito consultorial.</p>
 										</div>
 									</div>
 								</div>
-									
 							</div>
 						</div>
-					</div>	
-					<div class="col-12 text-center mt-3 suspension-points">
-						<i class="fas fa-minus"></i>
 					</div>
-					<div class="col-lg-5">
+				</div> -->
+			</div>
+		</div>
+		<div id="pilares" class="row">
+			<div class="col-lg-11 mx-auto py-5">
+				<div class="row">
+					<div class="col-lg-12 px-5">
 						<div class="row">
-							<div class="col-lg-12 px-1 pt-lg-5 list-news">
-								<ul class="px-1">
-									<a href="#">
-										<li>	
-											<b>1º</b> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore magni cum laboriosam soluta, temporibus neque veniam quis.
-										</li>
-										<hr class="my-1">
-									</a>
-									<a href="#">
-										<li>	
-											<b>2º</b> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore magni cum laboriosam soluta, temporibus neque veniam quis.
-										</li>
-										<hr class="my-1">
-									</a>
-									<a href="#">
-										<li>	
-											<b>3º</b> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore magni cum laboriosam soluta, temporibus neque veniam quis.
-										</li>
-										<hr class="my-1">
-									</a>
-									<a href="#">
-										<li>	
-											<b>3º</b> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore magni cum laboriosam soluta, temporibus neque veniam quis.
-										</li>
-										<hr class="my-1">
-									</a>
-									
-								</ul>
-							</div>
-							<div class="col-lg-12 pr-5 my-4 text-right link-text">
-								<a href="#">Mais notícias <i class="fas fa-angle-right pt-1"></i></a>
+							<div class="col-lg-12 text-center" data-aos="fade-down">
+								<h3 class="text-light text-uppercase">Pilares</h3>
+								<hr class="subtitle-line">
 							</div>
 						</div>
-					</div>	
+						<div class="row mt-4">
+							<div class="col-lg-4 text-center mt-1 py-3 text-light br" data-aos="fade-right">
+								<h4 class="title text-uppercase">Missão</h4>
+								<i class="far fa-lightbulb fa-5x"></i>
+								<p class="text px-3 mt-3">Assistência com foco no sucesso do empreendimento do cliente.</span>
+								</p>
+								<hr class="subtitle-line">
+							</div>
+							<div class="col-lg-4 text-center mt-1 py-3 text-light br" data-aos="fade-right">
+								<h4 class="title text-uppercase">Visão</h4>
+								<i class="far fa-eye fa-5x"></i>
+								<p class="text px-3 mt-3">Vontade e determinação de ir além do comum e conseguir alcançar patamares sempre maiores.</p>
+								<hr class="subtitle-line">
+							</div>
+							<div class="col-lg-4 text-center mt-1 py-3 text-light" data-aos="fade-right">
+								<h4 class="title text-uppercase">Valores</h4>
+								<i class="fas fa-chart-line fa-5x"></i>
+								<p class="text px-3 mt-3">Garantia de resultados postivos e sempre melhorias no âmbito consultorial.</p>
+								<hr class="subtitle-line">
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>										
-		</div> -->
+			</div>
+		</div>
+		<!-- <div class="row" style="min-height: 450px; background-color: rgb(38, 51, 60);"></div> -->
+		<div id="img" class="row" style="background-color: rgb(38, 51, 60)">
+			<div class="col-lg-11 mx-auto py-5">
+				<div class="row align-items-center">
+					<div class="col-lg-6 px-3 px-lg-5 py-4" data-aos="fade-up">
+						<h1 class="font-weight-lighter font-light text-justify">Perca o medo de investir, venha conosco</h1>
+						<h5 class="text-justify mt-4">Uma nova experiência criada para um novo jeito de investir</h5>
+						<p class="font-weight-lighter text-justify mt-4"><i class="fas fa-check mr-2"></i> Tenha uma visão geral de todos os seus investimentos em uma única tela.</p>
+						<p class="font-weight-lighter text-justify mt-2"><i class="fas fa-check mr-2"></i> Veja recomendações de produtos adequados ao seu perfil de investidor..</p>
+						<p class="font-weight-lighter text-justify mt-2"><i class="fas fa-check mr-2"></i>  Acompanhe a performance e o histórico de suas aplicações de maneira simples e intuitiva.</p>
+						<a href="#" class="btn btn-block">Conheça nosso modo de investir</a>
+					</div>
+					<div class="col-lg-6 img py-4" data-aos="fade-up"></div>
+				</div>
+			</div>
+		</div>
+		<div id="servicos" class="row">
+			<div class="col-lg-11 mx-auto py-5">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h3 class="text-uppercase title">Serviços</h3>
+						<hr class="subtitle-line">
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-lg-3 text-center" data-aos="fade-right">
+						<div class="serv px-2 py-5">
+							<i class="fas fa-address-book fa-4x"></i>
+							<h5 class="mt-2 text-light">Gestão de Pessoas</h5>
+						</div>
+					</div>
+					<div class="col-lg-3 text-center" data-aos="fade-right">
+						<div class="serv px-2 py-5">
+							<i class="fas fa-comments-dollar fa-4x"></i>
+							<h5 class="mt-2 text-light">Gestão de Dinheiro</h5>
+						</div>
+					</div>
+					<div class="col-lg-3 text-center" data-aos="fade-right">
+						<div class="serv px-2 py-5">
+							<i class="fas fa-business-time fa-4x"></i>
+							<h5 class="mt-2 text-light">Gestão de Empresas</h5>
+						</div>
+					</div>
+					<div class="col-lg-3 text-center" data-aos="fade-right">
+						<div class="serv px-2 py-5">
+							<i class="fas fa-desktop fa-4x"></i>
+							<h5 class="mt-2 text-light">Gestão de Serviços</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div id="parceiros" class="row">
 			<div class="col-lg-12 py-5 list">
 				<div class="row">
 					<div class="col-lg-12 text-center">
-						<h3 class="text-header title">NOSSOS ASSOCIADOS</h3>
+						<h3 class="text-header title text-uppercase">Associados</h3>
 						<hr class="subtitle-line">
 					</div>
 				</div>
 				<!-- <h1 class="text-center mt-0" ><i class="far fa-handshake fa-2x"></i></h1> -->
-				<p class="text-center text mt-0">Estes são nossos fieis parceiros que nos ajudam a manter o projeto e impactar a sociedade !</p>
-				<div class="owl-carousel owl-theme mt-4">
-					<a href="assets/img/parceiro1.png" data-fancybox='galery' data-caption="Imagem">
-						<div class="item">
-							<img src="assets/img/parceiro1.png" width="50" class="mx-auto">
-						</div>
-					</a>
-					
-					<a href="assets/img/parceiro3.png" data-fancybox='galery' data-caption="Imagem">
-						<div class="item">
-							<img src="assets/img/parceiro3.png" width="50" class="mx-auto">
-						</div>
-					</a>
-					<a href="assets/img/parceiro4.png" data-fancybox='galery' data-caption="Imagem">
-						<div class="item">
-							<img src="assets/img/parceiro4.png" width="50" class="mx-auto">
-						</div>
-					</a>
-					<a href="assets/img/parceiro2.png" data-fancybox='galery' data-caption="Imagem">
-						<div class="item">
-							<img src="assets/img/parceiro2.png" width="50" class="mx-auto">
-						</div>
-					</a>
-				</div>	
+				<!-- <p class="text-center text mt-0">Estes são nossos fieis parceiros que nos ajudam a manter o projeto e impactar a sociedade !</p> -->
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="owl-carousel owl-theme mt-4">
+							<div class="item" data-aos="fade-up">
+								<div class="row one">
+									<div class="col-lg-5 d-flex align-items-center">
+										<img src="assets/img/parceiro1.png" width="50" class="mx-auto">
+									</div>
+									<div class="col-lg-7 py-2">
+										<h3 class="title text-center">Nome</h3>
+										<p class="title text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae assumenda facere libero quisquam, beatae dolores autem ea asperiores illum deleniti. Repudiandae nam at dolorum nostrum soluta, nesciunt culpa ex.</p>
+									</div>									
+								</div>
+								<div class="row">
+									<div class="col-12" style="display: flex;align-self: flex-end;">
+										<a href="#" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="item" data-aos="fade-up">
+								<div class="row one">
+									<div class="col-lg-5 d-flex align-items-center">
+										<img src="assets/img/parceiro2.png" width="50" class="mx-auto">
+									</div>
+									<div class="col-lg-7 py-2">
+										<h3 class="title text-center">Nome</h3>
+										<p class="title text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae assumenda facere libero quisquam, beatae dolores autem ea asperiores illum deleniti. Repudiandae nam at dolorum nostrum soluta, nesciunt culpa ex.</p>
+									</div>									
+								</div>
+								<div class="row">
+									<div class="col-12" style="display: flex;align-self: flex-end;">
+										<a href="#" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row one">
+									<div class="col-lg-5 d-flex align-items-center">
+										<img src="assets/img/parceiro3.png" width="50" class="mx-auto">
+									</div>
+									<div class="col-lg-7 py-2">
+										<h3 class="title text-center">Nome</h3>
+										<p class="title text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae assumenda facere libero quisquam, beatae dolores autem ea asperiores illum deleniti. Repudiandae nam at dolorum nostrum soluta, nesciunt culpa ex.</p>
+									</div>									
+								</div>
+								<div class="row">
+									<div class="col-12" style="display: flex;align-self: flex-end;">
+										<a href="#" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row one">
+									<div class="col-lg-5 d-flex align-items-center">
+										<img src="assets/img/parceiro4.png" width="50" class="mx-auto">
+									</div>
+									<div class="col-lg-7 py-2">
+										<h3 class="title text-center">Nome</h3>
+										<p class="title text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae assumenda facere libero quisquam, beatae dolores autem ea asperiores illum deleniti. Repudiandae nam at dolorum nostrum soluta, nesciunt culpa ex.</p>
+									</div>									
+								</div>
+								<div class="row">
+									<div class="col-12" style="display: flex;align-self: flex-end;">
+										<a href="#" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
 			</div>	
 		</div>
-		<div id="instagram" class="row">
+		<div id="noticias" class="row">
+			<div class="col-lg-11 mx-auto py-5">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h3 class="text-uppercase">Notícias</h3>
+						<hr class="subtitle-line">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="owl-carousel owl-theme mt-4">
+							<div class="item" data-aos="fade-right">
+								<div class="row">
+									<div class="col-lg-6 mx-auto py-2">
+										<h3 class="text-center">Título</h3>
+										<p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae assumenda facere libero quisquam, beatae dolores autem ea asperiores illum deleniti. Repudiandae nam at dolorum nostrum soluta, nesciunt culpa ex.</p>
+										<p class="text-right">Fonte: G1</p>
+									</div>		
+									<div class="col-12 text-center">
+										<a href="#" class="btn">Ver notícia completa</a>
+									</div>								
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-lg-6 mx-auto py-2">
+										<h3 class="title text-center">Título</h3>
+										<p class="title text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae assumenda facere libero quisquam, beatae dolores autem ea asperiores illum deleniti. Repudiandae nam at dolorum nostrum soluta, nesciunt culpa ex.</p>
+										<p class="text-right text-light">Fonte: G1</p>
+									</div>	
+									<div class="col-12 text-center">
+										<a href="#" class="btn">Ver notícia completa</a>
+									</div>								
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="min-height: 450px; background-color: rgb(38, 51, 60);"></div>
+		<!-- <div id="instagram" class="row">
 			<div class="col-lg-11 mx-auto py-5">
 				<div class="row">
 					<div class="col-lg-12 text-center">
@@ -690,7 +451,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div id="contato" class="row paralax">
 			<div class="col-lg-11 mx-auto py-5 form-contato">
 				<div class="row">
@@ -738,90 +499,16 @@
 										<button style="display: none" class="browse-cancel btn btn-dark input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Cancelar <i class="fas fa-minus-circle"></i></button>
 									</div>
 								</div>
-								<button style="margin-top: 48px;" type="submit" class="btn btn-dark btn-block">Enviar <i class="far fa-paper-plane"></i></button>
+								<button style="margin-top: 48px;" type="submit" class="btn btn-block btn-submit">Enviar <i class="far fa-paper-plane"></i></button>
 							</div>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
-		<!-- 
-		<div id="servicos" class="row services" style="min-height: 450px;">
-			<div class="col-lg-10 mx-auto py-5">
-				<div class="row">
-					<div class="col-lg-12">
-						<h2 class="text-center">Planos & Preços</h2>
-						<p class="text-center title">Os melhores planos para você cuidar da sua beleza e se entreter.</p>
-					</div>
-					<div class="col-lg-6 plans">
-						<div class="row my-3">
-							<div class="col-9 text">
-								<h6>Men's Haircut</h6>
-							</div>
-							<div class="col-3 price">$20.00</div>
-							<div class="col-12"><p>A small river named Duden flows by their place and supplies</p></div>
-						</div>
-						<div class="row my-3">
-							<div class="col-9 text">
-								<h6>Children Haircut</h6>
-							</div>
-							<div class="col-3 price">$29.00</div>
-							<div class="col-12"><p>A small river named Duden flows by their place and supplies</p></div>
-						</div>
-						<div class="row my-3">
-							<div class="col-9 text">
-								<h6>Beard Cut</h6>
-							</div>
-							<div class="col-3 price">$20.00</div>
-							<div class="col-12"><p>A small river named Duden flows by their place and supplies</p></div>
-						</div>
-						<div class="row my-3">
-							<div class="col-9 text">
-								<h6>Men's Haircut</h6>
-							</div>
-							<div class="col-3 price">$20.00</div>
-							<div class="col-12"><p>A small river named Duden flows by their place and supplies</p></div>
-						</div>
-					</div>
-					<div class="col-lg-6 plans">
-						<div class="row my-3">
-							<div class="col-9 text">
-								<h6>Men's Haircut</h6>
-							</div>
-							<div class="col-3 price">$20.00</div>
-							<div class="col-12"><p>A small river named Duden flows by their place and supplies</p></div>
-						</div>
-						<div class="row my-3">
-							<div class="col-9 text">
-								<h6>Children Haircut</h6>
-							</div>
-							<div class="col-3 price">$29.00</div>
-							<div class="col-12"><p>A small river named Duden flows by their place and supplies</p></div>
-						</div>
-						<div class="row my-3">
-							<div class="col-9 text">
-								<h6>Beard Cut</h6>
-							</div>
-							<div class="col-3 price">$20.00</div>
-							<div class="col-12"><p>A small river named Duden flows by their place and supplies</p></div>
-						</div>
-						<div class="row my-3">
-							<div class="col-9 text">
-								<h6>Men's Haircut</h6>
-							</div>
-							<div class="col-3 price">$20.00</div>
-							<div class="col-12"><p>A small river named Duden flows by their place and supplies</p></div>
-						</div>
-					</div>
-					<div class="col-11 mt-1 mx-auto">
-						<h6 class="text-right"><a href="https://api.whatsapp.com/send?phone=5588997283474" target="_blank" style="text-decoration: underline !important; color: #ce9c6b"><i style="font-size: 25px" class="fab fa-whatsapp"></i> Agende pelo Whatsapp</a></h6>
-					</div>		
-				</div>
-			</div>	
-		</div>
-		 -->
-		<div class="row">
-			<div class="col-lg-12" style="min-height: 350px; background-color: #222; box-shadow: 2px 0px 5px #e9ecef; color: white">
+
+		<div id="footer" class="row">
+			<div class="col-lg-12 block">
 				<div class="row" style="min-height: 300px">
 					<div class="col-lg-3 px-4 py-5">
 						<div class="logo text-center">
@@ -829,14 +516,13 @@
 							<h1>Logo</h1>
 						</div>
 						
-						<p class="text-justify text-muted-footer mt-0" style="font-weight: 500">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<p class="text-justify text-muted-footer mt-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 					</div>
-					<div class="col-lg-2 py-5 px-4 ">
+					<div class="col-lg-2 py-5 px-4">
 						<h4>Menu</h4>
 						<div class="mt-4 pl-1 text-left">
 							<p><a href="#"  class="text-muted-footer menus">Home</a></p>
 							<p><a href="#"  class="text-muted-footer menus">Quem Somos</a></p>
-							<p><a href="#"  class="text-muted-footer menus">Manifesto</a></p>
 							<p><a href="#"  class="text-muted-footer menus">Dúvidas</a></p>
 							<p><a href="#"  class="text-muted-footer menus">Contato</a></p>
 						</div>
@@ -851,23 +537,23 @@
 							<p class="text-muted-footer data"><i class="fas fa-phone-volume"></i> (88) 93943-3438</p>
 							<p class="text-muted-footer data"><i class="fas fa-inbox"></i> suaempresa@gmail.com</p>
 							<div class="">
-								<a href="#" target="_blank" class="mr-3 instagram"><i style="font-size: 25px" class="fab fa-instagram"></i></a> 
-								<a href="#" target="_blank" class="mr-3 whatsapp"><i style="font-size: 25px" class="fab fa-whatsapp"></i></a> 
-								<a href="#" target="_blank" class="linkedin"><i style="font-size: 25px"class="fab fa-linkedin"></i></a>
+								<a href="#" target="_blank" class="mr-3"><i class="fab fa-instagram fa-2x"></i></a> 
+								<a href="#" target="_blank" class="mr-3"><i class="fab fa-whatsapp fa-2x"></i></a> 
+								<a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
 							</div>
 
 						</div>
 					</div>
 				</div>	
-				<div class="row" style="height: 50px;">
-					<div class="col-lg-12" style="display: flex;background-color: #09090963;align-items: center; justify-content: center;">
-						<p class="text-center mb-0" style="align-items: center;color: white">Copyright © Todos os direitos reservados.</p>
+				<div class="row">
+					<div class="col-lg-12 copy">
+						<p class="text-center mb-0">Copyright © Todos os direitos reservados.</p>
 					</div>
 				</div>
 				
 			</div>
 		</div>
-		<button id="myBtn" class="btn" onclick="topFunction()"><i style="color: white" class="fas fa-chevron-up"></i></button>
+		<button id="myBtn" class="btn" onclick="topFunction()"><i class="fas fa-chevron-up"></i></button>
 
 	</div>  
 	<!-- Modal Upload	 -->
@@ -912,10 +598,10 @@
 	<script src="assets/plugins/fontawesome/js/all.js"></script>
 	<script src="assets/plugins/owl-carousel/js/owl.carousel.js"></script>
 	<script type="text/javascript">
-	
+  		AOS.init();
 		
 
-		$('.owl-carousel').owlCarousel({
+		$('#parceiros .owl-carousel').owlCarousel({
 		    // margin:35,
 		    // responsiveClass:true,
 		    // responsive:{
@@ -954,23 +640,39 @@
 		    responsive:{
 		        0:{
 		            items:1,
-		            autoplay:true,
+		            // autoplay:true,
 			    	autoplayTimeout:3300,
 			    	autoplayHoverPause:true,
 		        },
 		        600:{
 		            items:3,
-		            autoplay:true,
+		            // autoplay:true,
 			    	autoplayTimeout:3000,
 			    	autoplayHoverPause:true,
 		        },
 		        1000:{
-		            items:4,
-		            autoplay:true,
+		            items:2,
+		            // autoplay:true,
 			    	autoplayTimeout:3000,
 			    	autoplayHoverPause:true,
 		        }
 		    }
+		})
+
+		$('#noticias .owl-carousel').owlCarousel({
+		    // autoplay:false,
+		    loop: true,
+		    margin: 135,
+		    // animateOut: 'slideOutDown',
+    		// animateIn: 'flipInX',
+			// nav:true,
+			dots: true,
+    		smartSpeed:450,
+    		stagePadding: 40,
+		    items:1,
+			autoplay:true,
+			autoplayTimeout:3000,
+			autoplayHoverPause:true,
 		})
 
 
