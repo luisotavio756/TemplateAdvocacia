@@ -14,12 +14,8 @@
 	<link rel="stylesheet" type="text/css" href="assets/plugins/fancybox/jquery.fancybox.css" />
 	<link rel="stylesheet" href="assets/plugins/owl-carousel/css/owl.carousel.min.css" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet">
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link href="assets/css/aos.css" rel="stylesheet">
 
-
-	<script src="assets/js/jquery.js"></script>
-	<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<style type="text/css">
 		body{
 			/* background: #eeeeee !important; */
@@ -68,7 +64,7 @@
 			}
 
 			.banner .img {
-				height: 90vh; 
+				height: 100vh; 
 				width: 100%;
 				/* Center and scale the image nicely */
 				background-position: center;
@@ -82,15 +78,13 @@
 			color: #343a40 !important;
 		} */
 
-
-
 		#img{
 			color: white;
 		}
 
 		#img .img{
 			/* The image used */
-			background-image: linear-gradient(#009ba4, #070e13), url("assets/img/chart.jpg");
+			background-image: linear-gradient(black, gray), url("assets/img/hra4.jpg");
 			background-blend-mode: multiply;
 			width: 100%;
 			height: 400px;
@@ -146,17 +140,65 @@
 			justify-content: center;
 			font-weight: bold;
 		}
+
+		
+		.banner{
+			/* The image used */
+			/* background-image: linear-gradient(#333, gray), url("assets/img/hra1.jpg");
+			background-blend-mode: multiply; */
+			/* width: 100%; */
+			height: 100vh;
+
+			/* background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover; */
+			/* border-radius: 10px; */
+			/* box-shadow: 1px 3px 15px 5px #495057; */
+			/* color: white; */
+		}
+
+		#carouselExampleFade .carousel-item div{
+			background-blend-mode: multiply;
+			/* /* background-attachment: fixed; */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover; 
+		}
+		/* POSSIVEL COR */
+		/* rgb(49, 49, 49); 
+		background-color: rgb(38, 51, 60) */
+		.carousel-caption {
+			position: absolute;
+			top: 30%;
+			right: 15%;
+			/* bottom: 20px; */
+			left: 2%;
+			z-index: 10;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			color: #fff;
+			text-align: justify;
+		}
+
+		.carousel-caption h5{
+			font-size: 3.5rem;
+		}
 	</style>
 </head>
 <body>
 	<div class="container-fluid fadeIn">
 		<div class="row">
 			<nav class="navbar navbar-expand-md w-100  fixed-top">
-				<a class="navbar-brand" href="#"><!-- <img src="assets/img/logo.png" style="height: auto; width: 150px"> --><h2 style="color: white">Logo</h2></a>
-				<button style="display: none" class="btn btn-nav" type="button" onclick="openNav()">
+				<a class="navbar-brand mx-auto" href="#">
+					<img src="assets/img/include.svg" style="height: auto; width: 150px; filter: brightness(0) invert(1);">
+					
+					<!-- <h2 style="color: white">Logo</h2> -->
+				</a>
+				<!-- <button style="display: none" class="btn btn-nav" type="button" onclick="openNav()">
 					<i style="color: white" class="fas fa-bars"></i>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarCollapse">
+				</button> -->
+				<!-- <div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item position-relative px-1">
 							<a class="nav-link scrollsuave" href="#"><div class="div-nav"></div>Home</a>
@@ -171,7 +213,7 @@
 							<a class="nav-link scrollsuave" href="#contato"><div class="div-nav"></div>Contato</a>
 						</li>
 					</ul>
-				</div>
+				</div> -->
 			</nav>
 			<div id="mob-sidenav" class="sidenav">
 				<a href="javascript:void(0)" class="closebtn btn" onclick="closeNav()">
@@ -197,35 +239,31 @@
 		</div>
 		<div class="row">
 			<div class="col-12 px-0 banner">
-				<img src="assets/img/banner2.jpg" alt="" class="img">
-				<!-- <div class="teste visible-desk">
-					<div id="pilares-one" class="row">
-						<div class="col-lg-11 mx-auto py-2 text-light">
-							<div class="row">
-								<div class="col-lg-12 px-0">
-									<div class="row">
-										<div class="col text-center py-3 px-0" style="border-right: 1px solid rgba(255, 255, 255, 0.5)" data-aos="fade-right">
-											<h4 class="title text-uppercase">Missão</h4>
-											<i class="far fa-lightbulb fa-5x"></i>
-											<p class="text px-3 mt-3">Assistência com foco no sucesso do empreendimento do cliente.</span>
-											</p>
-										</div>
-										<div class="col text-center py-3 px-0" style="border-right: 1px solid rgba(255, 255, 255, 0.5)" data-aos="fade-right">
-											<h4 class="title text-uppercase">Visão</h4>
-											<i class="far fa-eye fa-5x"></i>
-											<p class="text px-3 mt-3">Vontade e determinação de ir além do comum e conseguir alcançar patamares sempre maiores.</p>
-										</div>
-										<div class="col text-center py-3 px-0" data-aos="fade-right">
-											<h4 class="title text-uppercase">Valores</h4>
-											<i class="fas fa-chart-line fa-5x"></i>
-											<p class="text px-3 mt-3">Garantia de resultados postivos e sempre melhorias no âmbito consultorial.</p>
-										</div>
-									</div>
-								</div>
+				<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="3500">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div style="background-image: linear-gradient(#333, #333, #333, gray), url('assets/img/hra1.jpg')" class="d-block w-100 h-100" alt="..."></div>
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Hra Brasil</h5>
+								<p class="font-weight-lighter">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+							</div>
+						</div>
+						<div class="carousel-item ">
+							<div style="background-image: linear-gradient(#333, #333, #333, gray), url('assets/img/hra2.jpg')" class="d-block w-100 h-100" alt="..."></div>
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Ambiente profissional</h5>
+								<p class="font-weight-lighter">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+							</div>
+						</div>
+						<div class="carousel-item ">
+							<div style="background-image: linear-gradient(#333, #333, #333, gray), url('assets/img/hra3.jpg')" class="d-block w-100 h-100" alt="..."></div>
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Buscando sempre o melhor</h5>
+								<p class="font-weight-lighter">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 							</div>
 						</div>
 					</div>
-				</div> -->
+				</div>
 			</div>
 		</div>
 		<div id="pilares" class="row">
@@ -264,7 +302,7 @@
 			</div>
 		</div>
 		<!-- <div class="row" style="min-height: 450px; background-color: rgb(38, 51, 60);"></div> -->
-		<div id="img" class="row" style="background-color: rgb(38, 51, 60)">
+		<div id="img" class="row" style="background-color: rgb(49, 49, 49)">
 			<div class="col-lg-11 mx-auto py-5">
 				<div class="row align-items-center">
 					<div class="col-lg-6 px-3 px-lg-5 py-4" data-aos="fade-up">
@@ -437,7 +475,23 @@
 				</div>
 			</div>
 		</div>
-		<div class="row" style="min-height: 450px; background-color: rgb(38, 51, 60);"></div>
+		<div id="img" class="row" style="background-color: rgb(49, 49, 49)">
+			<div class="col-lg-11 mx-auto py-5">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h3 class="text-uppercase">Parceiros</h3>
+						<hr class="subtitle-line">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-5">
+						
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
 		<!-- <div id="instagram" class="row">
 			<div class="col-lg-11 mx-auto py-5">
 				<div class="row">
@@ -536,11 +590,7 @@
 							<p class="text-muted-footer data"><i class="fas fa-map-marker-alt"></i> Av. Coronel Araújo Lima, 1348, Centro - Russas/CE</p>
 							<p class="text-muted-footer data"><i class="fas fa-phone-volume"></i> (88) 93943-3438</p>
 							<p class="text-muted-footer data"><i class="fas fa-inbox"></i> suaempresa@gmail.com</p>
-							<div class="">
-								<a href="#" target="_blank" class="mr-3"><i class="fab fa-instagram fa-2x"></i></a> 
-								<a href="#" target="_blank" class="mr-3"><i class="fab fa-whatsapp fa-2x"></i></a> 
-								<a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-							</div>
+							
 
 						</div>
 					</div>
@@ -556,40 +606,9 @@
 		<button id="myBtn" class="btn" onclick="topFunction()"><i class="fas fa-chevron-up"></i></button>
 
 	</div>  
-	<!-- Modal Upload	 -->
-	<div class="modal fade" id="modal-upload" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Envio de Foto</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<form class="form-img" action="" method="POST" enctype="multipart/form-data">
-						<div class="form-group mb-0">
-							<div class="input-group mb-0">
-								<input type="file" name="img[]" class="file-img d-none">
-								<input type="text" class="form-control browse-input-img" placeholder="Escolha uma foto.." required="">
-								<div class="input-group-append">
-									<button  class="browse-img btn btn-dark btn-sm" type="button"><i class="glyphicon glyphicon-search"></i>Buscar <i class="fas fa-cloud-upload-alt"></i></button>
-								</div>
-							</div>
-						</div>
-						<p class="mt-1" style="font-size: 14px"><b>Atenção</b> ! Apenas extensões <b>*jpg</b>, <b>*jpeg</b>.</p>
-						
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
-					<button type="button" class="btn btn-sm" style="background-color: #ce9c6b ;color: white">Enviar Foto</button>
-				</div>
-			</div>
-		</div>
-	</div>
 </div>
-	
+	<script src="assets/js/jquery.js"></script>
+	<!-- <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script> -->
 	<script src="assets/bootstrap/js/bootstrap.js"></script>
 	<script src="assets/js/popper.min.js"></script>
 	<script src="assets/js/main.js"></script>
@@ -597,7 +616,10 @@
 	<script src="assets/plugins/fancybox/jquery.fancybox.js"></script>
 	<script src="assets/plugins/fontawesome/js/all.js"></script>
 	<script src="assets/plugins/owl-carousel/js/owl.carousel.js"></script>
+	<script src="assets/js/aos.js"></script>
 	<script type="text/javascript">
+		
+
   		AOS.init();
 		
 

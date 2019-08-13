@@ -75,14 +75,18 @@ a:hover{
 }
 
 .navbar{
-	box-shadow: -12px -8px 5px 5px white; 
-	/*height: 75px;*/
+	
+	/*  */
+	height: 65px;
 	/*background-color: red;*/
-	transition: all 1s, background-image 2s;
+	transition: all 1s;
+	
 }
 
 .navbar-dark{
-	background-color: black
+	box-shadow: -12px -8px 5px 5px white;
+	background-color: #333;
+	
 }
 
 @media (max-width: 700px) {
@@ -415,7 +419,7 @@ textarea:focus {
 }
 
 #parceiros .list{
-	background-color: rgb(38, 51, 60);
+	background-color: rgb(49, 49, 49);
 	/* box-shadow: 1px 1px 10px 1px #6c757d; */
 }
 
@@ -457,7 +461,7 @@ textarea:focus {
 /* SERVIÇOS */
 #servicos {
 	/* The image used */
-	background-image: linear-gradient(#009ba4, #070e13), url("../img/services.jpg");
+	background-image: linear-gradient(black, #333, #333, gray), url("../img/services.jpg");
 	background-blend-mode: multiply;
 	/* filter: blur(1px); */
 	/* Set a specific height */
@@ -495,7 +499,7 @@ textarea:focus {
 /* NOTICIAS */
 #noticias{
 	/* The image used */
-	background-image: linear-gradient(#009ba4, #070e13), url("../img/news.jpg");
+	background-image: linear-gradient(black, #333, #333, gray), url("../img/news.jpg");
 	background-blend-mode: multiply;
 	/* filter: blur(1px); */
 	/* Set a specific height */
@@ -524,7 +528,7 @@ textarea:focus {
 /* PILARES */
 #pilares {
 	/* The image used */
-	background-image: linear-gradient(#009ba4, #070e13), url("../img/grecia.jpg");
+	background-image: linear-gradient(black, #333, #333, #333, gray), url("../img/grecia.jpg");
 	background-blend-mode: multiply;
 	/* filter: blur(1px); */
 	/* Set a specific height */
@@ -552,7 +556,7 @@ textarea:focus {
 /* CONTATO */
 #contato {
 	/* The image used */
-	background-image: linear-gradient(#009ba4, #070e13), url("../img/img1.jpg");
+	background-image: linear-gradient(black, #333, #333, gray), url("../img/img1.jpg");
 	background-blend-mode: multiply;
 	/* filter: blur(1px); */
 	/* Set a specific height */
