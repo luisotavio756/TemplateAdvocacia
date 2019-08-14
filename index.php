@@ -22,6 +22,10 @@
 			font-family: 'Roboto Condensed', sans-serif !important;
 		}
 
+		html, body {
+			height: 100%;
+		}
+
 		button, a.btn {
 			border-radius: 120px !important;
 			transition: all 0.2s;
@@ -94,7 +98,7 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			/* border-radius: 10px; */
-			box-shadow: 1px 3px 15px 5px #495057;
+			/* box-shadow: 1px 3px 15px 5px #495057; */
 			/* color: white; */
 		}
 		#img a.btn{
@@ -147,7 +151,7 @@
 			/* background-image: linear-gradient(#333, gray), url("assets/img/hra1.jpg");
 			background-blend-mode: multiply; */
 			/* width: 100%; */
-			height: 100vh;
+			height: 100%;
 
 			/* background-attachment: fixed;
 			background-position: center;
@@ -182,7 +186,18 @@
 		}
 
 		.carousel-caption h5{
-			font-size: 3.5rem;
+			font-weight: lighter;
+			font-size: 4rem;
+		}
+
+		.carousel-caption p{
+			font-weight: lighter;
+		}
+
+		.navbar .navbar-brand img{
+			height: auto; 
+			width: 150px; 
+			filter: brightness(0) invert(1);
 		}
 	</style>
 </head>
@@ -191,7 +206,7 @@
 		<div class="row">
 			<nav class="navbar navbar-expand-md w-100  fixed-top">
 				<a class="navbar-brand mx-auto" href="#">
-					<img src="assets/img/include.svg" style="height: auto; width: 150px; filter: brightness(0) invert(1);">
+					<img src="assets/img/include.svg">
 					
 					<!-- <h2 style="color: white">Logo</h2> -->
 				</a>
