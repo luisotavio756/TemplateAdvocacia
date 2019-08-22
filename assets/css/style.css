@@ -1,54 +1,4 @@
-.subtitle-line {
-	height: 3px;
-	width: 25%;
-	color: #009BA4;
-	background-color: #009BA4;
-	border-style: solid !important;
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-	border: initial !important;
-	border-radius: 5px;
-}
 
-a{
-	text-decoration: none !important;
-	color: inherit;
-
-}
-
-a:hover{
-	text-decoration: none !important;
-	color: inherit;
-}
-
-/*	FADE EFFECT	*/
-
-@-webkit-keyframes fadeIn {
-	0% { opacity: 0; }
-	100% { opacity: 1; } 
-}
-
-@-moz-keyframes fadeIn {
-	0% { opacity: 0;}
-	100% { opacity: 1; }
-}
-
-@-o-keyframes fadeIn {
-	0% { opacity: 0; }
-	100% { opacity: 1; }
-}
-
-@keyframes fadeIn {
-	0% { opacity: 0; }
-	100% { opacity: 1; }
-}
-
-.fadeIn {
-	-webkit-animation: fadeIn 1s ease-in-out;
-	-moz-animation: fadeIn 1s ease-in-out;
-	-o-animation: fadeIn 1s ease-in-out;
-	animation: fadeIn 1s ease-in-out;
-}
 
 /*	NAV	*/
 
@@ -77,7 +27,7 @@ a:hover{
 .navbar{
 	
 	/*  */
-	height: 70px;
+	height: 150px;
 	/*background-color: red;*/
 	transition: all 1s;
 	
@@ -87,6 +37,12 @@ a:hover{
 	box-shadow: -12px -8px 5px 5px white;
 	background-color: #333;
 	
+}
+
+.navbar .navbar-brand img{
+	height: auto; 
+	width: 150px; 
+	filter: grayscale(1);
 }
 
 @media (max-width: 700px) {
@@ -123,145 +79,7 @@ a:hover{
 	color: #009ba4;
 }
 
-/*	FLOATING LABELS	*/
-
-label {
-	color: #fff;
-	font-size: 1.2em;
-	font-weight: lighter;
-	left: .4em;
-	position: absolute;
-	top: 0.6em;
-	transition: all 0.1s linear;
-}
-
-input, select, textarea {
-	background-color: transparent;
-	border: none;
-	border-bottom: 1px solid #ffffffe0;
-	color: #ffffffe0;
-	font-size: 1.15em;
-	padding: .75em .5em .5em;
-	width: 100%;
-}
-
-select {
-	color: #009BA4 !important;
-}
-
-select:focus + label,
-select + label.show {
-	border-radius: 4px;
-	color: #009BA4;
-	font-size: 1em;
-	left: .5em;
-	padding: 0 .15em;
-	top: -1em;
-}
-
-textarea:focus + label,
-textarea + label.show {
-	border-radius: 4px;
-	color: #009BA4;
-	font-size: 1em;
-	left: .5em;
-	padding: 0 .15em;
-	top: -1em;
-}
-
-
-input:focus + label,
-input + label.show {
-	border-radius: 4px;
-	color: #009BA4;
-	font-size: 1em;
-	left: .5em;
-	padding: 0 .15em;
-	top: -1em;
-}
-
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-.form-group {
-	margin-bottom: 1.75em;
-	position: relative;
-}
-
-input:focus {
-	border-color: #009BA4;
-	outline: 0;
-}
-
-select:focus {
-	border-color: #009BA4;
-	outline: 0;
-}
-
-textarea:focus {
-	border-color: #009BA4;
-	outline: 0;
-}
-
-/*	SCROOL BAR */
-::-webkit-scrollbar {
-	width: 10px;
-
-}
-
-::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey; 
-	/* border-radius: 10px; */
-}
-
-::-webkit-scrollbar-thumb {
-	background: #333; 
-	/* border-radius: 10px; */
-}
-
-::-webkit-scrollbar-thumb:hover {
-	opacity: 0.5; 
-}
-
-/*	PARALAX */
-
-
-.paralax-divisor {
-	height: 250px;
-
-	background-image: url("../img/banner2.jpg");
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-
-
 /*	STYLES */
-.marketing {
-	color: white;
-}
-
-.va{
-	background: no-repeat center center scroll;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-.cards:hover{
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0);
-	/*text-shadow: 0px 1px 8px white;*/
-	border-radius: 10px;
-	transition: 0.5s;
-	cursor: pointer;
-}
 
 .file {
 	visibility: hidden;
@@ -352,35 +170,38 @@ textarea:focus {
 
 
 /*FOOTER*/
-
-.text-muted-footer, .instagram, .whatsapp, .linkedin{
-	color: #abadbe;
-	transition: all 0.4s;
-}
-
-.text-muted-footer:hover{
+#footer .block{
+	min-height: 350px; 
+	background-color: #222; 
+	/* box-shadow: 2px 0px 5px #e9ecef;  */
 	color: white;
 }
 
-.instagram:hover{
-	color: #d03481;
+#footer h4{
+	color: #009ba4;
+	font-weight: normal;
 }
 
-.whatsapp:hover{
-	color: #00e676;
+#footer a, #footer p{
+	font-weight: lighter;
+	transition: all 0.2s;
 }
 
-.linkedin:hover{
-	color: #4997ce;
+#footer a:hover, #footer p:hover{
+	color: #009ba4;
 }
 
-.data{
-	font-size: 14px;
+#footer .copy{
+	height: 50px;
+	color: #009ba4;
+	display: flex;
+	background-color: #09090963;
+	align-items: center; 
+	justify-content: center;
+	font-weight: bold;
 }
 
-.menus{
-	font-weight: 600;
-}
+
 
 /* PARCEIROS */
 
@@ -515,6 +336,12 @@ textarea:focus {
 }
 
 #noticias .item .btn{
+	border: 2px solid white;
+	color: white;
+	transition: all 0.2s;
+}
+
+#noticias .btn-more{
 	border: 2px solid white;
 	color: white;
 	transition: all 0.2s;

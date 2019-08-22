@@ -101,7 +101,7 @@ $(document).ready(function($) {
 			if (prevScrollpos > currentScrollPos) {
 				document.getElementsByClassName("navbar")[0].style.top = "0";
 			} else {
-				document.getElementsByClassName("navbar")[0].style.top = "-75px";
+				document.getElementsByClassName("navbar")[0].style.top = "-150px";
 			}
 		}
 

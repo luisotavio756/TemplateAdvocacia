@@ -8,35 +8,19 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" type="text/css" href="../../assets/bootstrap/css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/more.css" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/fontes.css" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/carousel.css" />
 	<link rel="stylesheet" type="text/css" href="../../assets/plugins/fontawesome/css/all.css" />
 	<link rel="stylesheet" type="text/css" href="../../assets/plugins/fancybox/jquery.fancybox.css" />
 	<link rel="stylesheet" href="../../assets/plugins/owl-carousel/css/owl.carousel.min.css" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet">
-	<link href="../../assets/css/aos.css" rel="stylesheet">
+	<!-- <link href="../../assets/css/aos.css" rel="stylesheet"> -->
 
 	<style type="text/css">
 		body{
 			/* background: #eeeeee !important; */
 			font-family: 'Roboto Condensed', sans-serif !important;
-		}
-
-		html, body {
-			height: 100%;
-		}
-
-		button, a.btn {
-			border-radius: 120px !important;
-			transition: all 0.2s;
-		}
-
-		button:hover, a.btn:hover{
-			box-shadow: 0px 0px 2px 1px #009ba4;
-		}
-
-		p, h3, h4, li {
-			font-weight: lighter;
 		}
 
 		@media screen and (max-width: 768px) {
@@ -76,38 +60,6 @@
 				background-size: cover;
 			}
 		}
-
-		#footer .block{
-			min-height: 350px; 
-			background-color: #222; 
-			/* box-shadow: 2px 0px 5px #e9ecef;  */
-			color: white;
-		}
-
-		#footer h4{
-			color: #009ba4;
-			font-weight: normal;
-		}
-
-		#footer a, #footer p{
-			font-weight: lighter;
-			transition: all 0.2s;
-		}
-
-		#footer a:hover, #footer p:hover{
-			color: #009ba4;
-		}
-
-		#footer .copy{
-			height: 50px;
-			color: #009ba4;
-			display: flex;
-			background-color: #09090963;
-			align-items: center; 
-			justify-content: center;
-			font-weight: bold;
-		}
-
 		
 		#banner{
 			/* The image used */
@@ -257,8 +209,8 @@
 	<div class="container-fluid fadeIn">
 		<div class="row">
 			<nav class="navbar navbar-expand-md w-100  fixed-top">
-				<a class="navbar-brand mx-auto" href="#">
-					<img src="../../assets/img/include.svg">
+				<a class="navbar-brand mx-auto" href="../../index.php">
+					<img src="../../assets/img/hra.png">
 					
 					<!-- <h2 style="color: white">Logo</h2> -->
 				</a>
@@ -326,10 +278,10 @@
 			<div class="col-lg-11 mx-auto py-5">
 				<div class="row">
 					<div class="col-lg-6 visible-desk">
-						<img src="../../assets/img/hra2.JPG" class="img-fluid" alt="">
+						<img src="../../assets/img/hra2.jpg" class="img-fluid" alt="">
 					</div>
 					<div class="col-lg-6 visible-desk">
-						<img src="../../assets/img/hra2.JPG" class="img-fluid" alt="">
+						<img src="../../assets/img/hra2.jpg" class="img-fluid" alt="">
 					</div>
 				</div>
 				<div class="row mt-4">
@@ -341,7 +293,7 @@
 								<p class="descricao text-justify mb-0">Aos 94 anos, Saul Dreier dançou, sorriu e empolgou público no auditório do Anhembi.</p>
 							</div>
 							<div class="col-lg-5 px-0">
-								<img src="../../assets/img/hra2.JPG" class="img-fluid" alt="">
+								<img src="../../assets/img/hra2.jpg" class="img-fluid" alt="">
 							</div>
 							<div class="col-12 block-bottom visible-mob">
 								<p class="horario mb-0">Há 1 hora - Em Distrito Federal</p>
@@ -362,7 +314,7 @@
 								
 							</div>
 							<div class="col-lg-5 px-0">
-								<img src="../../assets/img/hra2.JPG" class="img-fluid" alt="">
+								<img src="../../assets/img/hra2.jpg" class="img-fluid" alt="">
 							</div>
 							<div class="col-12 block-bottom visible-mob">
 								<p class="horario mb-0">Há 1 hora - Em Distrito Federal</p>
@@ -382,7 +334,7 @@
 								<p class="descricao text-justify mb-0">Aos 94 anos, Saul Dreier dançou, sorriu e empolgou público no auditório do Anhembi.</p>
 							</div>
 							<div class="col-lg-5 px-0">
-								<img src="../../assets/img/hra2.JPG" class="img-fluid" alt="">
+								<img src="../../assets/img/hra2.jpg" class="img-fluid" alt="">
 							</div>
 							<div class="col-12 block-bottom visible-mob">
 								<p class="horario mb-0">Há 1 hora - Em Distrito Federal</p>
@@ -487,11 +439,11 @@
 	<script src="../../assets/plugins/fancybox/jquery.fancybox.js"></script>
 	<script src="../../assets/plugins/fontawesome/js/all.js"></script>
 	<script src="../../assets/plugins/owl-carousel/js/owl.carousel.js"></script>
-	<script src="../../assets/js/aos.js"></script>
+	<!-- <script src="../../assets/js/aos.js"></script> -->
 	<script type="text/javascript">
 		
 
-  		AOS.init();
+  		// AOS.init();
 		
 
 		$('#parceiros .owl-carousel').owlCarousel({

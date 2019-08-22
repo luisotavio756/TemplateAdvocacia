@@ -10,10 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/more.css" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/fontes.css" />
-	<link rel="stylesheet" type="text/css" href="../../assets/css/carousel.css" />
 	<link rel="stylesheet" type="text/css" href="../../assets/plugins/fontawesome/css/all.css" />
-	<link rel="stylesheet" type="text/css" href="../../assets/plugins/fancybox/jquery.fancybox.css" />
-	<link rel="stylesheet" href="../../assets/plugins/owl-carousel/css/owl.carousel.min.css" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet">
 	<!-- <link href="../../assets/css/aos.css" rel="stylesheet"> -->
 
@@ -23,9 +20,54 @@
 			font-family: 'Roboto Condensed', sans-serif !important;
 		}
 		
+		@media screen and (max-width: 768px) {
+			.visible-mob{
+				display: block;
+			}
+
+			.visible-desk{
+				display: none;
+			}
+
+			.banner .img{
+				height: auto; 
+				width: 100%;
+			}
+		}
+
+		@media screen and (min-width: 769px) {
+			.visible-mob{
+				display: none;
+			}
+
+			.visible-desk{
+				display: block;
+			}
+
+			#pilares .br{
+				border-right: 1px solid rgba(255, 255, 255, 0.5);
+			}
+
+			.banner .img {
+				height: 100vh; 
+				width: 100%;
+				/* Center and scale the image nicely */
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		}
+
+		#footer .block{
+			min-height: 350px; 
+			background-color: #222; 
+			/* box-shadow: 2px 0px 5px #e9ecef;  */
+			color: white;
+		}
+
 		#banner{
 			/* The image used */
-			background-image: linear-gradient(#333, gray), url("../../assets/img/hra3.jpg");
+			background-image: linear-gradient(#333, gray), url("../../assets/img/news.jpg");
 			background-blend-mode: multiply;
 			/* width: 100%; */
 			height: 100vh;
@@ -39,6 +81,7 @@
 			/* color: white; */
 			display: flex;
 			align-items: center;
+            justify-content: center;
 		}
 
 		#banner img{
@@ -52,16 +95,17 @@
 			padding: 15px 25px;
 			font-size: 22px;
 		}
-
-		#banner .bottom{
-			position: absolute;
-			bottom: 5px;
-		}
 		/* POSSIVEL COR */
 		/* rgb(49, 49, 49); 
 		background-color: rgb(38, 51, 60) */
 
-		#sobre{
+		.navbar .navbar-brand img{
+			height: auto; 
+			width: 150px; 
+			filter: brightness(0) invert(1);
+		}
+
+		#news{
 			/* The image used */
 			background: rgb(49, 49, 49);
 			/* background-blend-mode: multiply; */
@@ -74,47 +118,69 @@
 			/* color: white; */
 		}
 
-		#carouselExampleFade .carousel-item{
-			background-blend-mode: multiply;
-			/* /* background-attachment: fixed; */
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover; 
-			height: auto;
+		#news .ver-mais {
+			border: 2px solid white;
+			color: white;
+			transition: all 0.2s;
 		}
+
+
+
 		/* POSSIVEL COR */
 		/* rgb(49, 49, 49); 
 		background-color: rgb(38, 51, 60) */
 
-		#contato-empresa{
-			/* The image used */
-			background-image: linear-gradient(#333, #333, gray), url("../../assets/img/map.jpg");
-			background-blend-mode: multiply;
-			/* width: 100%; */
-
-			background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-
-		#contato-empresa .block{
-			border: 2px solid white;
-			border-radius: 10px;
-		}
-
-		#contato-empresa h4{
-			color: #009ba4;
-		}
 		
-		#contato-empresa .block a, #contato-empresa .block p{
-			transition: all 0.2s; 
+		#banner .bottom {
+			position: absolute;
+			bottom: 5px;
+
 		}
 
-		#contato-empresa .block a:hover, #contato-empresa .block p:hover{
-			color: #009ba4;
+        .block-down {
+            padding: 8px;
+			background: white;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
 		}
-		
+        .news-content hr{
+            background: rgba(255, 255, 255, 0.5)
+        }
+
+        .news-content .titulo {
+            color: white;
+            font-weight: normal;
+            /* font-weight: normal;
+            font-size: 14px; */
+        }
+
+        .news-content .fonte {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .news-content .descricao_curta {
+            color: #dcdcdc !important;
+            font-weight: normal;
+            /* font-size: 14px; */
+        }
+        
+        .news-content .data {
+            color: #009ba4;
+            font-weight: normal;
+            font-size: 14px;
+        }
+
+        .news-content .content p {
+            font-size: 1.25rem;
+            color: white;
+
+        }
+
+        .news-content img {
+            border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+        }
 	</style>
 </head>
 <body>
@@ -169,87 +235,53 @@
 			</div>
 		</div>
 		<div id="banner" class="row">
-			<div class="col-12 mt-5 text-center">
-				<img src="../../assets/img/parceiro1.png">
-				<h1 class="text-light">Associado</h1>
+			<div class="col-lg-6 text-center">
+				<!-- <img src="../../assets/img/parceiro1.png"> -->
+				<h1 class="text-light">
+                    'Diplomacia sem armas é como música sem instrumentos’, diz Eduardo Bolsonaro na Câmara
+                </h1>
 				<!-- <p class="text-light text-justify w-50 mx-auto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam laudantium blanditiis iste quas, maiores deserunt illum odit animi similique debitis, unde nihil expedita laborum quae minus voluptates qui magnam id?</p> -->
-				<div class="text-light mt-3 mb-2" data-aos="fade-right">
+				<!-- <div class="text-light mt-3 mb-2" data-aos="fade-right">
                     <a href="#" target="_blank" class="mr-3"><i class="fab fa-instagram fa-2x"></i></a> 
                     <a href="#" target="_blank" class="mr-3"><i class="fab fa-whatsapp fa-2x"></i></a> 
                     <a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                </div>
+                </div> -->
 				<hr class="subtitle-line text-light">
+                <p class="mt-2 text-light">Fonte: G1</p>
 			</div>
-			<div class="col-12 mx-auto mb-2 text-center bottom">
-				<a href="#sobre" class="btn text-light scrollsuave pulsate">
+			<div class="col-12 text-center bottom">
+				<a href="#news" class="btn text-light scrollsuave">
 					<i class="fas fa-angle-down"></i>
 				</a>
 			</div>
 		</div>
-		<div id="sobre" class="row">
-			<div class="col-lg-11 mx-auto py-5">
+		<div id="news" class="row">
+			<div class="col-lg-8 mx-auto py-5 news-content">
 				<div class="row">
-					<div class="col-lg-6">
-						<div class="col-lg-12 text-center" data-aos="fade-down">
-							<h3 class="text-uppercase text-light">Sobre</h3>
-							<hr class="subtitle-line">
-						</div>
-						<div class="col-lg-12 py-lg-5 mt-3" data-aos="fade-right">
-							<p class="text-justify text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. At sed, dolorem rerum quidem maxime iure quaerat autem debitis, minus sint consequuntur? Amet eius nulla incidunt dignissimos doloremque hic accusantium dicta?<br>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. At sed, dolorem rerum quidem maxime iure quaerat autem debitis, minus sint consequuntur? Amet eius nulla incidunt dignissimos doloremque hic accusantium dicta?<br>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. At sed, dolorem rerum quidem maxime iure quaerat autem debitis, minus sint consequuntur? Amet eius nulla incidunt dignissimos doloremque hic accusantium dicta?
-							</p>
-						</div>
+					<div class="col-lg-12">
+                        <h1 class="text-light text-justify titulo">'Diplomacia sem armas é como música sem instrumentos’, diz Eduardo Bolsonaro na Câmara'</h1>
+                        <h5 class="text-light text-justify descricao_curta">Bolsonaro ampliou a potência das armas que podem ser adquiridas pela população em geral, mas cabia ao Exército definir os modelos.</h5>
 					</div>
-					<div class="col-lg-6 px-0 px-lg-1">
-						<div class="col-lg-12 text-center" data-aos="fade-up">
-							<h3 class="text-uppercase text-light">Mídia</h3>
-							<hr class="subtitle-line">
-						</div>
-						<div class="col-lg-12 px-0 mt-3" data-aos="fade-right">
-							<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3500">
-								<div class="carousel-inner">
-									<div class="carousel-item active" style="width: 100%; height: auto; background-image: linear-gradient(#333, #333, #333, gray), url('../../assets/img/hra1.jpg')">
-										<!-- <div style="" class="d-block w-100 h-100" alt="..."></div> -->
-									</div>
-									<div class="carousel-item" style="width: 100%; height: auto; background-image: linear-gradient(#333, #333, #333, gray), url('../../assets/img/hra2.jpg')">
-										<!-- <div style="" class="d-block w-100 h-100" alt="..."></div> -->
-									</div>
-
-								</div>
-							</div>
-						</div>
+                    <div class="col-lg-12">
+                        <p class="data mb-0">15/08/2019 13h33</p>
+                        <hr>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div id="contato-empresa" class="row">
-			<div class="col-lg-11 mx-auto py-5 px-4">
-				<div class="row">
-					<div class="col-lg-12 text-center" data-aos="fade-down">
-						<h3 class="text-uppercase text-light">Contato</h3>
-						<hr class="subtitle-line">
+                <div class="row px-1 px-lg-4">
+                    <div class="col-lg-12">
+                        <img src="../../assets/img/news.jpg" class="img-fluid" alt="">
+                        <div class="block-down">
+                            <h6 class="mb-0 fonte"><i class="fas fa-camera"></i> Fonte: acervo</h6>
+                        </div>
 					</div>
-				</div>
-				<div class="row mt-4 text-light block" data-aos="fade-right">
-					<div class="col-lg-4 py-5 px-4 text-center">
-						<h4>Empresa</h4>
-						<div class="mt-4 pl-1 text-justify">
-							<p class=""><i class="fas fa-map-marker-alt"></i> Av. Coronel Araújo Lima, 1348, Centro - Russas/CE</p>
-							<p class=""><i class="fas fa-phone-volume"></i> (88) 93943-3438</p>
-							<p class=""><i class="fas fa-inbox"></i> suaempresa@gmail.com</p>
-							<div class="text-center pt-4">
-								<a href="#" target="_blank" class="mr-3"><i class="fab fa-instagram fa-2x"></i></a> 
-								<a href="#" target="_blank" class="mr-3"><i class="fab fa-whatsapp fa-2x"></i></a> 
-								<a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-							</div>
-
-						</div>
+                    <div class="col-lg-12 mt-3 content">
+                        <p class="text-light text-justify">
+                            O Exército Brasileiro vetou a compra de fuzis por cidadãos comuns, mas liberou o acesso a pistolas que antes eram de uso restrito das forças de segurança, como a 9mm e a .45. As regras constam de uma portaria publicada nesta quinta-feira (15) no Diário Oficial da União. O texto regulamenta um dos decretos sobre armas do presidente Jair Bolsonaro, que foi publicado em junho.<br><br>
+                            A portaria define quais armas são classificadas de uso permitido, que podem ser adquirido por qualquer pessoa que cumpra os requisitos legais para ter uma arma; e as de uso restrito, que só podem ser usados por categorias específicas.<br><br>
+                            Os fuzis de diversos calibres, como 5.56mm e 7.62mm, foram classificados como restritos – ou seja, não podem ser adquiridos pelo cidadão comum. 
+                        </p>
 					</div>
-					<div class="col-lg-8 py-5 text-center">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5621.580815561395!2d-37.95654399617288!3d-4.929968940982865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x667d48fa538468ec!2sMetal%C3%BArgica+S%C3%A3o+Jos%C3%A9+De+Anchieta!5e0!3m2!1spt-BR!2sbr!4v1559328265308!5m2!1spt-BR!2sbr" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-					</div>
-				</div>
+                </div>
 			</div>
 		</div>
 
@@ -305,94 +337,10 @@
 	<script src="../../assets/js/popper.min.js"></script>
 	<script src="../../assets/js/main.js"></script>
 	<script src="../../assets/plugins/mask/jquery.mask.js"></script>
-	<script src="../../assets/plugins/fancybox/jquery.fancybox.js"></script>
 	<script src="../../assets/plugins/fontawesome/js/all.js"></script>
-	<script src="../../assets/plugins/owl-carousel/js/owl.carousel.js"></script>
 	<!-- <script src="../../assets/js/aos.js"></script> -->
-	<script type="text/javascript">
-		
-
+	<script type="text/javascript">	
   		// AOS.init();
-		
-
-		$('#parceiros .owl-carousel').owlCarousel({
-		    // margin:35,
-		    // responsiveClass:true,
-		    // responsive:{
-		    //     0:{
-		    //         items:1,
-		    //         nav:true
-		    //     },
-		    //     600:{
-		    //         items:3,
-		    //         nav:true,
-		    //         animateOut: 'slideOutDown',
-		    // 		animateIn: 'flipInX',
-		    // 		smartSpeed:450,
-		    // 		stagePadding: 50,
-		    //     },
-		    //     1000:{
-		    //         items:4,
-		    //         nav:true,
-		    //         loop:true,
-		    //         animateOut: 'slideOutDown',
-		    // 		animateIn: 'flipInX',
-		    // 		smartSpeed:450,
-		    // 		stagePadding: 50,
-		    //     }
-		    // }
-
-				
-		    autoplay:false,
-		    loop: true,
-		    margin: 35,
-		    // animateOut: 'slideOutDown',
-    		// animateIn: 'flipInX',
-    		smartSpeed:450,
-    		stagePadding: 40,
-		    
-		    responsive:{
-		        0:{
-		            items:1,
-		            // autoplay:true,
-			    	autoplayTimeout:3300,
-			    	autoplayHoverPause:true,
-		        },
-		        600:{
-		            items:3,
-		            // autoplay:true,
-			    	autoplayTimeout:3000,
-			    	autoplayHoverPause:true,
-		        },
-		        1000:{
-		            items:2,
-		            // autoplay:true,
-			    	autoplayTimeout:3000,
-			    	autoplayHoverPause:true,
-		        }
-		    }
-		})
-
-		$('#noticias .owl-carousel').owlCarousel({
-		    // autoplay:false,
-		    loop: true,
-		    margin: 135,
-		    // animateOut: 'slideOutDown',
-    		// animateIn: 'flipInX',
-			// nav:true,
-			dots: true,
-    		smartSpeed:450,
-    		stagePadding: 40,
-		    items:1,
-			autoplay:true,
-			autoplayTimeout:3000,
-			autoplayHoverPause:true,
-		})
-
-
-
-		
-	
   	</script>
 </body>
 </html>

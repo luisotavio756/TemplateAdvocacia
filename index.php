@@ -7,6 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/more.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/fontes.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/carousel.css" />
@@ -14,30 +15,9 @@
 	<link rel="stylesheet" type="text/css" href="assets/plugins/fancybox/jquery.fancybox.css" />
 	<link rel="stylesheet" href="assets/plugins/owl-carousel/css/owl.carousel.min.css" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet">
-	<link href="assets/css/aos.css" rel="stylesheet">
+	<!-- <link href="assets/css/aos.css" rel="stylesheet"> -->
 
 	<style type="text/css">
-		body{
-			/* background: #eeeeee !important; */
-			font-family: 'Roboto Condensed', sans-serif !important;
-		}
-
-		html, body {
-			height: 100%;
-		}
-
-		button, a.btn {
-			border-radius: 120px !important;
-			transition: all 0.2s;
-		}
-
-		button:hover, a.btn:hover{
-			box-shadow: 0px 0px 2px 1px #009ba4;
-		}
-
-		p, h3, h4, li {
-			font-weight: lighter;
-		}
 
 		@media screen and (max-width: 992px) {
 			.visible-mob{
@@ -113,38 +93,6 @@
 		#img p svg{
 			color: #009ba4;
 		}
-
-		#footer .block{
-			min-height: 350px; 
-			background-color: #222; 
-			/* box-shadow: 2px 0px 5px #e9ecef;  */
-			color: white;
-		}
-
-		#footer h4{
-			color: #009ba4;
-			font-weight: normal;
-		}
-
-		#footer a, #footer p{
-			font-weight: lighter;
-			transition: all 0.2s;
-		}
-
-		#footer a:hover, #footer p:hover{
-			color: #009ba4;
-		}
-
-		#footer .copy{
-			height: 50px;
-			color: #009ba4;
-			display: flex;
-			background-color: #09090963;
-			align-items: center; 
-			justify-content: center;
-			font-weight: bold;
-		}
-
 		
 		.banner{
 			/* The image used */
@@ -194,10 +142,16 @@
 			font-weight: lighter;
 		}
 
-		.navbar .navbar-brand img{
-			height: auto; 
-			width: 150px; 
-			filter: brightness(0) invert(1);
+		#carousel .bottom{
+			position: absolute;
+   			bottom: 5px;
+			z-index: 9999;
+			
+		}
+
+		#carousel .bottom a{
+			border: 2px solid white;
+			padding: 15px 25px;
 		}
 	</style>
 </head>
@@ -205,8 +159,8 @@
 	<div class="container-fluid fadeIn">
 		<div class="row">
 			<nav class="navbar navbar-expand-md w-100  fixed-top">
-				<a class="navbar-brand mx-auto" href="#">
-					<img src="assets/img/include.svg">
+				<a class="navbar-brand mx-auto" href="index.php">
+					<img src="assets/img/hra.png">
 					
 					<!-- <h2 style="color: white">Logo</h2> -->
 				</a>
@@ -252,26 +206,26 @@
 			    </nav>
 			</div>
 		</div>
-		<div class="row">
+		<div id="carousel" class="row justify-center">
 			<div class="col-12 px-0 banner">
 				<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="3500">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<div style="background-image: linear-gradient(#333, #333, #333, gray), url('assets/img/hra1.jpg')" class="d-block w-100 h-100" alt="..."></div>
+							<div style="background-image: url('assets/img/hra1.jpg')" class="d-block w-100 h-100" alt="..."></div>
 							<div class="carousel-caption d-none d-md-block">
 								<h5>Hra Brasil</h5>
 								<p class="font-weight-lighter">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 							</div>
 						</div>
 						<div class="carousel-item ">
-							<div style="background-image: linear-gradient(#333, #333, #333, gray), url('assets/img/hra2.jpg')" class="d-block w-100 h-100" alt="..."></div>
+							<div style="background-image: url('assets/img/hra2.jpg')" class="d-block w-100 h-100" alt="..."></div>
 							<div class="carousel-caption d-none d-md-block">
 								<h5>Ambiente profissional</h5>
 								<p class="font-weight-lighter">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 							</div>
 						</div>
 						<div class="carousel-item ">
-							<div style="background-image: linear-gradient(#333, #333, #333, gray), url('assets/img/hra3.jpg')" class="d-block w-100 h-100" alt="..."></div>
+							<div style="background-image: url('assets/img/hra3.jpg')" class="d-block w-100 h-100" alt="..."></div>
 							<div class="carousel-caption d-none d-md-block">
 								<h5>Buscando sempre o melhor</h5>
 								<p class="font-weight-lighter">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -279,6 +233,11 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="col-12 mx-auto mb-2 text-center bottom">
+				<a href="#pilares" class="btn text-light scrollsuave pulsate">
+					<i class="fas fa-angle-down"></i>
+				</a>
 			</div>
 		</div>
 		<div id="pilares" class="row">
@@ -393,7 +352,7 @@
 								</div>
 								<div class="row">
 									<div class="col-12" style="display: flex;align-self: flex-end;">
-										<a href="#" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
+										<a href="pages/associados/" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -409,7 +368,7 @@
 								</div>
 								<div class="row">
 									<div class="col-12" style="display: flex;align-self: flex-end;">
-										<a href="#" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
+										<a href="pages/associados/" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -425,7 +384,7 @@
 								</div>
 								<div class="row">
 									<div class="col-12" style="display: flex;align-self: flex-end;">
-										<a href="#" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
+										<a href="pages/associados/" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -441,7 +400,7 @@
 								</div>
 								<div class="row">
 									<div class="col-12" style="display: flex;align-self: flex-end;">
-										<a href="#" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
+										<a href="pages/associados/" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -469,7 +428,7 @@
 										<p class="text-right">Fonte: G1</p>
 									</div>		
 									<div class="col-12 text-center">
-										<a href="#" class="btn">Ver notícia completa</a>
+										<a href="pages/noticias/pagenoticia.php" class="btn">Ver notícia completa</a>
 									</div>								
 								</div>
 							</div>
@@ -481,16 +440,19 @@
 										<p class="text-right text-light">Fonte: G1</p>
 									</div>	
 									<div class="col-12 text-center">
-										<a href="#" class="btn">Ver notícia completa</a>
+										<a href="pages/noticias/pagenoticia.php" class="btn">Ver notícia completa</a>
 									</div>								
 								</div>
 							</div>
 						</div>	
 					</div>
+					<div class="col-lg-12 text-right">
+						<a href="pages/noticias/" class="btn btn-more">Mais notícias</a>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div id="img" class="row" style="background-color: rgb(49, 49, 49)">
+		<!-- <div id="img" class="row" style="background-color: rgb(49, 49, 49)">
 			<div class="col-lg-11 mx-auto py-5">
 				<div class="row">
 					<div class="col-lg-12 text-center">
@@ -506,7 +468,7 @@
 					
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- <div id="instagram" class="row">
 			<div class="col-lg-11 mx-auto py-5">
 				<div class="row">
@@ -631,11 +593,11 @@
 	<script src="assets/plugins/fancybox/jquery.fancybox.js"></script>
 	<script src="assets/plugins/fontawesome/js/all.js"></script>
 	<script src="assets/plugins/owl-carousel/js/owl.carousel.js"></script>
-	<script src="assets/js/aos.js"></script>
+	<!-- <script src="assets/js/aos.js"></script> -->
 	<script type="text/javascript">
 		
 
-  		AOS.init();
+  		// AOS.init();
 		
 
 		$('#parceiros .owl-carousel').owlCarousel({
