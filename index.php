@@ -6,7 +6,7 @@
  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/more.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/fontes.css" />
@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/plugins/fancybox/jquery.fancybox.css" />
 	<link rel="stylesheet" href="assets/plugins/owl-carousel/css/owl.carousel.min.css" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet">
-	<!-- <link href="assets/css/aos.css" rel="stylesheet"> -->
+
 
 	<style type="text/css">
 
@@ -24,11 +24,21 @@
 				display: block;
 			}
 
-			.visible-desk{
+			.visible-desk, .navbar-desk{
 				display: none;
 			}
 
-			.banner .img{
+			.card-main{
+				border-right: none !important;
+				border-bottom: 1px solid #dee2e6 !important;
+			}
+
+			.card-main .link-more{
+				display: block !important;
+				font-size: 16px !important;
+			}
+
+			.banner-img{
 				height: auto; 
 				width: 100%;
 			}
@@ -39,15 +49,11 @@
 				display: none;
 			}
 
-			.visible-desk{
+			.visible-desk, .navbar-desk{
 				display: block;
 			}
 
-			#pilares .br{
-				border-right: 1px solid rgba(255, 255, 255, 0.5);
-			}
-
-			.banner .img {
+			.banner-img {
 				height: 100vh; 
 				width: 100%;
 				/* Center and scale the image nicely */
@@ -57,139 +63,207 @@
 			}
 		}
 
-
-		/* #contato label{
-			color: #343a40 !important;
-		} */
-
-		#img{
-			color: white;
-		}
-
-		#img .img{
-			/* The image used */
-			background-image: linear-gradient(black, gray), url("assets/img/hra4.jpg");
-			background-blend-mode: multiply;
-			width: 100%;
-			height: 400px;
-
-			/* background-attachment: fixed; */
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			/* border-radius: 10px; */
-			/* box-shadow: 1px 3px 15px 5px #495057; */
-			/* color: white; */
-		}
-		#img a.btn{
-			background-color: transparent !important;
-		}
-
-		#img a.btn{
-			border: 2px solid #009ba4;
-			color: white;
-		}
-
-		#img p svg{
-			color: #009ba4;
-		}
 		
-		.banner{
-			/* The image used */
-			/* background-image: linear-gradient(#333, gray), url("assets/img/hra1.jpg");
-			background-blend-mode: multiply; */
-			/* width: 100%; */
-			height: 100%;
 
-			/* background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover; */
-			/* border-radius: 10px; */
-			/* box-shadow: 1px 3px 15px 5px #495057; */
-			/* color: white; */
+		html, body{
+			height: 100% !important;
 		}
 
-		#carouselExampleFade .carousel-item div{
-			background-blend-mode: multiply;
-			/* /* background-attachment: fixed; */
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover; 
-		}
+
 		/* POSSIVEL COR */
 		/* rgb(49, 49, 49); 
 		background-color: rgb(38, 51, 60) */
-		.carousel-caption {
+		
+		.navbar-desk{
 			position: absolute;
-			top: 30%;
-			right: 15%;
-			/* bottom: 20px; */
-			left: 2%;
-			z-index: 10;
-			padding-top: 20px;
-			padding-bottom: 20px;
-			color: #fff;
-			text-align: justify;
+
+			z-index: 1030;
 		}
 
-		.carousel-caption h5{
-			font-weight: lighter;
-			font-size: 4rem;
+		.navbar-desk .navbar .navbar-collapse .navbar-nav{
+			border: 1px solid #3C3C3B;
+			background: #1C1D1E !important;
+			box-shadow: 0 0 3px 0px #6c757d;
 		}
 
-		.carousel-caption p{
-			font-weight: lighter;
+		.navbar-desk .navbar .nav-item{
+			padding: 0 1.25rem !important;
 		}
 
-		#carousel .bottom{
+		.navbar-desk .navbar .nav-link{
+			font-weight: lighter !important;
+			text-transform: uppercase;
+			font-size: 11px !important;
+			
+		}
+		
+		.navbar-desk .logo img, .visible-mob .navbar-brand {
+			filter: brightness(0) invert(1);
+		}
+
+		.navbar-desk .logo img{
+			height: auto; 
+			width: 250px; 
+			
+		} 
+
+		.navbar-desk .icons-us{
+			position: absolute;
+			top: 5px;
+			right: 10px;
+			color: white;
+			width: 60px;
+			border: 1px solid white;
+			border-radius: 10px;
+			padding: 5px;
+		}
+
+		#banner .bottom{
 			position: absolute;
    			bottom: 5px;
 			z-index: 9999;
 			
 		}
 
-		#carousel .bottom a{
+		#banner .bottom a{
 			border: 2px solid white;
 			padding: 15px 25px;
+		}
+
+		#banner .effect-up{
+			position: absolute;
+			top: 0;
+			height: 200px;
+			background: rgb(252,252,252);
+			background: linear-gradient(0deg, rgba(252,252,252,0.014443277310924318) 0%, rgba(7,14,19,0.8911939775910365) 83%);
+			
+		}
+
+		#banner .effect-down{
+			position: absolute;
+			bottom: 0;
+			height: 300px;
+			background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 15%, rgba(252,252,252,0.014443277310924318) 100%);
+			
+		}
+
+		#main{
+			/* height: 100vh; */
+			background: black;
+		}
+
+		.card-main{
+			cursor: pointer;
+			transition: all 0.2s;
+		}
+		
+		.card-main:hover{
+			background-color: rgba(255, 255, 255, 0.08);
+		}
+
+		.card-main p{
+			font-size: 10px;
+		}
+
+		.card-main h6{
+			opacity: 0.7;
+			font-size: 12px;
+		}
+
+		.card-main a h4{
+			font-size: 19px;
+			color: #ce9c6bb0
+		}
+
+		.card-main .link-more{
+			display: none;
+			position: absolute; 
+			top: 10px; 
+			right: 15px;
+			font-size: 14px;
+			transition: all 0.2s;
+		}
+
+		.card-main .link-more:hover{
+			cursor: default;
+			text-decoration: underline !important;
+		}
+
+		.card-main:hover .link-more {
+			display: block;
 		}
 	</style>
 </head>
 <body>
 	<div class="container-fluid fadeIn">
-		<div class="row">
-			<nav class="navbar navbar-expand-md w-100  fixed-top">
-				<a class="navbar-brand mx-auto" href="index.php">
-					<img src="assets/img/hra.png">
+		<div class="row navbar-desk w-100">
+			<div class="col-12 text-center logo mt-5">
+				<a href="index.php">
+					<img src="assets/img/include.svg">
 					
 					<!-- <h2 style="color: white">Logo</h2> -->
 				</a>
-				<!-- <button style="display: none" class="btn btn-nav" type="button" onclick="openNav()">
+			</div>
+			<nav class="navbar navbar-expand-md w-100 mt-3">
+				<button style="display: none" class="btn btn-nav" type="button" onclick="openNav()">
 					<i style="color: white" class="fas fa-bars"></i>
-				</button> -->
-				<!-- <div class="collapse navbar-collapse" id="navbarCollapse">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item position-relative px-1">
-							<a class="nav-link scrollsuave" href="#"><div class="div-nav"></div>Home</a>
+				</button> 
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav mx-auto">
+						<li class="nav-item" style="border-right: 2px solid #3C3C3B">
+							<a class="nav-link scrollsuave" href="#">Home</a>
 						</li>
-						<li class="nav-item position-relative px-1">
-							<a class="nav-link scrollsuave" href="#servicos"><div class="div-nav"></div>Notícias</a>
+						<li class="nav-item" style="border-right: 2px solid #3C3C3B">
+							<a class="nav-link scrollsuave" href="#quemsomos">Sobre a Empresa</a>
 						</li>
-						<li class="nav-item position-relative px-1">
-							<a class="nav-link scrollsuave" href="#quemsomos"><div class="div-nav"></div>Quem Somos <i class="fas fa-angle-down pt-1"></i></a>
+						<li class="nav-item" style="border-right: 2px solid #3C3C3B">
+							<a class="nav-link scrollsuave" href="#quemsomos">Associados</a>
 						</li>
-						<li class="nav-item position-relative px-1">
-							<a class="nav-link scrollsuave" href="#contato"><div class="div-nav"></div>Contato</a>
+						<li class="nav-item dropdown" style="border-right: 2px solid #3C3C3B">
+							<a class="nav-link scrollsuave" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+								Acontece <i class="fa fa-bars" style="color: #ce9c6b"></i>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item text-uppercase" href="#">Action</a>
+								<div class="dropdown-divider my-1"></div>
+								<a class="dropdown-item text-uppercase" href="#">Another action</a>
+								<div class="dropdown-divider my-1"></div>
+								<a class="dropdown-item text-uppercase" href="#">Something else here</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link scrollsuave" href="#contato">Contato</a>
 						</li>
 					</ul>
-				</div> -->
+				</div>
+			</nav>
+			<div class="border-bottom icons-us text-center">
+				us <i class="fas fa-flag-usa"></i>
+			</div>
+			<!-- <div class="col-12 w-100 mt-4 text-center teste">
+				<h4 class="" style="color: #ce9c6b; text-shadow: 2px 2px 6px 10px #ce9c6b;">Consultancy & Investment</h4>
+			</div>
+			<div class="col-12 w-100 text-center">
+				<hr class="my-0" style="width: 30%; background: #dcdcdc">
+			</div> -->
+		</div>
+		<div class="row visible-mob">
+			<nav class="navbar navbar-mob navbar-expand-lg fixed-top">
+				<a class="navbar-brand" href="#">
+					<img src="assets/img/include.svg" style="width: 150px; height: auto">
+				</a>
+				<button style="color: white !important;
+				border: 2px solid white;" class="btn btn-nav" type="button" onclick="openNav()">
+					<i class="fa fa-bars"></i>
+				</button>
 			</nav>
 			<div id="mob-sidenav" class="sidenav">
 				<a href="javascript:void(0)" class="closebtn btn" onclick="closeNav()">
 					<i class="fas fa-chevron-right"></i>
 				</a>
-			    <nav class="h-100" style="display: flex; align-items: center; justify-content: center;">
-			        <ul class="navbar-nav w-100">
+				<nav class="h-100" style="display: flex; align-items: center; justify-content: center;">
+					<ul class="navbar-nav w-100">
 						<li class="nav-item w-75 position-relative px-1">
 							<a class="nav-link text-center scrollsuave" href="#" href=""><div class="div-mob"></div>Home</a>
 						</li>
@@ -203,341 +277,91 @@
 							<a class="nav-link text-center scrollsuave" href="#contato" href=""><div class="div-mob"></div>Contato</a>
 						</li>
 					</ul>
-			    </nav>
+				</nav>
 			</div>
 		</div>
-		<div id="carousel" class="row justify-center">
-			<div class="col-12 px-0 banner">
-				<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="3500">
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<div style="background-image: url('assets/img/hra1.jpg')" class="d-block w-100 h-100" alt="..."></div>
-							<div class="carousel-caption d-none d-md-block">
-								<h5>Hra Brasil</h5>
-								<p class="font-weight-lighter">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-							</div>
-						</div>
-						<div class="carousel-item ">
-							<div style="background-image: url('assets/img/hra2.jpg')" class="d-block w-100 h-100" alt="..."></div>
-							<div class="carousel-caption d-none d-md-block">
-								<h5>Ambiente profissional</h5>
-								<p class="font-weight-lighter">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-							</div>
-						</div>
-						<div class="carousel-item ">
-							<div style="background-image: url('assets/img/hra3.jpg')" class="d-block w-100 h-100" alt="..."></div>
-							<div class="carousel-caption d-none d-md-block">
-								<h5>Buscando sempre o melhor</h5>
-								<p class="font-weight-lighter">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-							</div>
-						</div>
-					</div>
-				</div>
+		<div id="banner" class="row justify-center">
+			<div class="col-12 px-0">
+				<img src="assets/img/banner3.jpg" class="banner-img"/>
+				
+				<div class="w-100 effect-down"></div>
 			</div>
-			<div class="col-12 mx-auto mb-2 text-center bottom">
+			<!-- <div class="col-12 effect-up"></div> -->
+			
+			<!-- <div class="col-12 mx-auto mb-2 text-center bottom">
 				<a href="#pilares" class="btn text-light scrollsuave pulsate">
 					<i class="fas fa-angle-down"></i>
 				</a>
-			</div>
+			</div> -->
 		</div>
-		<div id="pilares" class="row">
-			<div class="col-lg-11 mx-auto py-5">
+		<div id="main" class="row">
+			<div class="col-lg-10 mx-auto my-5 px-4">
 				<div class="row">
-					<div class="col-lg-12 px-5">
-						<div class="row">
-							<div class="col-lg-12 text-center" data-aos="fade-down">
-								<h3 class="text-light text-uppercase">Pilares</h3>
-								<hr class="subtitle-line">
-							</div>
-						</div>
-						<div class="row mt-4">
-							<div class="col-lg-4 text-center mt-1 py-3 text-light br" data-aos="fade-right">
-								<h4 class="title text-uppercase">Missão</h4>
-								<i class="far fa-lightbulb fa-5x"></i>
-								<p class="text px-3 mt-3">Assistência com foco no sucesso do empreendimento do cliente.</span>
-								</p>
-								<hr class="subtitle-line">
-							</div>
-							<div class="col-lg-4 text-center mt-1 py-3 text-light br" data-aos="fade-right">
-								<h4 class="title text-uppercase">Visão</h4>
-								<i class="far fa-eye fa-5x"></i>
-								<p class="text px-3 mt-3">Vontade e determinação de ir além do comum e conseguir alcançar patamares sempre maiores.</p>
-								<hr class="subtitle-line">
-							</div>
-							<div class="col-lg-4 text-center mt-1 py-3 text-light" data-aos="fade-right">
-								<h4 class="title text-uppercase">Valores</h4>
-								<i class="fas fa-chart-line fa-5x"></i>
-								<p class="text px-3 mt-3">Garantia de resultados postivos e sempre melhorias no âmbito consultorial.</p>
-								<hr class="subtitle-line">
-							</div>
-						</div>
+					<div class="col-lg-4 border-right border-bottom p-5 card-main">
+						<p class="my-0 text-light">03.08.2019</p>
+						<h6 class="my-0 text-light">Eventos</h6>
+						<a href="#">
+							<h4 class="mt-2">
+								Seminário sobre modulação de efeitos de decisões do STF em matéria Tributária
+							</h4>
+						</a>	
+						<a href="#" class="link-more">
+							+ Eventos
+						</a>
+					</div>
+					<div class="col-lg-4 border-right border-bottom p-5 card-main">
+						<p class="my-0 text-light">03.08.2019</p>
+						<h6 class="my-0 text-light">Eventos</h6>
+						<a href="#">
+							<h4 class="mt-2">
+								Seminário sobre modulação de efeitos de decisões do STF em matéria Tributária
+							</h4>
+						</a>
+					</div>
+					<div class="col-lg-4 border-bottom p-5 card-main">
+						<p class="my-0 text-light">03.08.2019</p>
+						<h6 class="my-0 text-light">Eventos</h6>
+						<a href="#">
+							<h4 class="mt-2">
+								Seminário sobre modulação de efeitos de decisões do STF em matéria Tributária
+							</h4>
+						</a>
 					</div>
 				</div>
-			</div>
-		</div>
-		<!-- <div class="row" style="min-height: 450px; background-color: rgb(38, 51, 60);"></div> -->
-		<div id="img" class="row" style="background-color: rgb(49, 49, 49)">
-			<div class="col-lg-11 mx-auto py-5">
-				<div class="row align-items-center">
-					<div class="col-lg-6 px-3 px-lg-5 py-4" data-aos="fade-up">
-						<h1 class="font-weight-lighter font-light text-justify">Perca o medo de investir, venha conosco</h1>
-						<h5 class="text-justify mt-4">Uma nova experiência criada para um novo jeito de investir</h5>
-						<p class="font-weight-lighter text-justify mt-4"><i class="fas fa-check mr-2"></i> Tenha uma visão geral de todos os seus investimentos em uma única tela.</p>
-						<p class="font-weight-lighter text-justify mt-2"><i class="fas fa-check mr-2"></i> Veja recomendações de produtos adequados ao seu perfil de investidor..</p>
-						<p class="font-weight-lighter text-justify mt-2"><i class="fas fa-check mr-2"></i>  Acompanhe a performance e o histórico de suas aplicações de maneira simples e intuitiva.</p>
-						<a href="#" class="btn btn-block">Conheça nosso modo de investir</a>
-					</div>
-					<div class="col-lg-6 img py-4" data-aos="fade-up"></div>
-				</div>
-			</div>
-		</div>
-		<div id="servicos" class="row">
-			<div class="col-lg-11 mx-auto py-5">
 				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h3 class="text-uppercase title">Serviços</h3>
-						<hr class="subtitle-line">
-					</div>
+					<div class="col-lg-12 border-bottom" style="height: 300px;"></div>
 				</div>
-				<div class="row mt-4">
-					<div class="col-lg-3 text-center" data-aos="fade-right">
-						<div class="serv px-2 py-5">
-							<i class="fas fa-address-book fa-4x"></i>
-							<h5 class="mt-2 text-light">Gestão de Pessoas</h5>
-						</div>
+				<div class="row">
+					<div class="col-lg-4 border-right p-5 card-main">
+						<p class="my-0 text-light">03.08.2019</p>
+						<h6 class="my-0 text-light">Eventos</h6>
+						<a href="#">
+							<h4 class="mt-2">
+								Seminário sobre modulação de efeitos de decisões do STF em matéria Tributária
+							</h4>
+						</a>
 					</div>
-					<div class="col-lg-3 text-center" data-aos="fade-right">
-						<div class="serv px-2 py-5">
-							<i class="fas fa-comments-dollar fa-4x"></i>
-							<h5 class="mt-2 text-light">Gestão de Dinheiro</h5>
-						</div>
+					<div class="col-lg-4 border-right p-5 card-main">
+						<p class="my-0 text-light">03.08.2019</p>
+						<h6 class="my-0 text-light">Eventos</h6>
+						<a href="#">
+							<h4 class="mt-2">
+								Seminário sobre modulação de efeitos de decisões do STF em matéria Tributária
+							</h4>
+						</a>
 					</div>
-					<div class="col-lg-3 text-center" data-aos="fade-right">
-						<div class="serv px-2 py-5">
-							<i class="fas fa-business-time fa-4x"></i>
-							<h5 class="mt-2 text-light">Gestão de Empresas</h5>
-						</div>
-					</div>
-					<div class="col-lg-3 text-center" data-aos="fade-right">
-						<div class="serv px-2 py-5">
-							<i class="fas fa-desktop fa-4x"></i>
-							<h5 class="mt-2 text-light">Gestão de Serviços</h5>
-						</div>
+					<div class="col-lg-4 p-5 card-main">
+						<p class="my-0 text-light">03.08.2019</p>
+						<h6 class="my-0 text-light">Eventos</h6>
+						<a href="#">
+							<h4 class="mt-2">
+								Seminário sobre modulação de efeitos de decisões do STF em matéria Tributária
+							</h4>
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="parceiros" class="row">
-			<div class="col-lg-12 py-5 list">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h3 class="text-header title text-uppercase">Associados</h3>
-						<hr class="subtitle-line">
-					</div>
-				</div>
-				<!-- <h1 class="text-center mt-0" ><i class="far fa-handshake fa-2x"></i></h1> -->
-				<!-- <p class="text-center text mt-0">Estes são nossos fieis parceiros que nos ajudam a manter o projeto e impactar a sociedade !</p> -->
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="owl-carousel owl-theme mt-4">
-							<div class="item" data-aos="fade-up">
-								<div class="row one">
-									<div class="col-lg-5 d-flex align-items-center">
-										<img src="assets/img/parceiro1.png" width="50" class="mx-auto">
-									</div>
-									<div class="col-lg-7 py-2">
-										<h3 class="title text-center">Nome</h3>
-										<p class="title text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae assumenda facere libero quisquam, beatae dolores autem ea asperiores illum deleniti. Repudiandae nam at dolorum nostrum soluta, nesciunt culpa ex.</p>
-									</div>									
-								</div>
-								<div class="row">
-									<div class="col-12" style="display: flex;align-self: flex-end;">
-										<a href="pages/associados/" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="item" data-aos="fade-up">
-								<div class="row one">
-									<div class="col-lg-5 d-flex align-items-center">
-										<img src="assets/img/parceiro2.png" width="50" class="mx-auto">
-									</div>
-									<div class="col-lg-7 py-2">
-										<h3 class="title text-center">Nome</h3>
-										<p class="title text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae assumenda facere libero quisquam, beatae dolores autem ea asperiores illum deleniti. Repudiandae nam at dolorum nostrum soluta, nesciunt culpa ex.</p>
-									</div>									
-								</div>
-								<div class="row">
-									<div class="col-12" style="display: flex;align-self: flex-end;">
-										<a href="pages/associados/" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="row one">
-									<div class="col-lg-5 d-flex align-items-center">
-										<img src="assets/img/parceiro3.png" width="50" class="mx-auto">
-									</div>
-									<div class="col-lg-7 py-2">
-										<h3 class="title text-center">Nome</h3>
-										<p class="title text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae assumenda facere libero quisquam, beatae dolores autem ea asperiores illum deleniti. Repudiandae nam at dolorum nostrum soluta, nesciunt culpa ex.</p>
-									</div>									
-								</div>
-								<div class="row">
-									<div class="col-12" style="display: flex;align-self: flex-end;">
-										<a href="pages/associados/" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="row one">
-									<div class="col-lg-5 d-flex align-items-center">
-										<img src="assets/img/parceiro4.png" width="50" class="mx-auto">
-									</div>
-									<div class="col-lg-7 py-2">
-										<h3 class="title text-center">Nome</h3>
-										<p class="title text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae assumenda facere libero quisquam, beatae dolores autem ea asperiores illum deleniti. Repudiandae nam at dolorum nostrum soluta, nesciunt culpa ex.</p>
-									</div>									
-								</div>
-								<div class="row">
-									<div class="col-12" style="display: flex;align-self: flex-end;">
-										<a href="pages/associados/" class="title font-weight-lighter ml-auto">Conhecer associado <i class="fas fa-chevron-right"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>	
-					</div>
-				</div>
-			</div>	
-		</div>
-		<div id="noticias" class="row">
-			<div class="col-lg-11 mx-auto py-5">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h3 class="text-uppercase">Notícias</h3>
-						<hr class="subtitle-line">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="owl-carousel owl-theme mt-4">
-							<div class="item" data-aos="fade-right">
-								<div class="row">
-									<div class="col-lg-6 mx-auto py-2">
-										<h3 class="text-center">Título</h3>
-										<p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae assumenda facere libero quisquam, beatae dolores autem ea asperiores illum deleniti. Repudiandae nam at dolorum nostrum soluta, nesciunt culpa ex.</p>
-										<p class="text-right">Fonte: G1</p>
-									</div>		
-									<div class="col-12 text-center">
-										<a href="pages/noticias/pagenoticia.php" class="btn">Ver notícia completa</a>
-									</div>								
-								</div>
-							</div>
-							<div class="item">
-								<div class="row">
-									<div class="col-lg-6 mx-auto py-2">
-										<h3 class="title text-center">Título</h3>
-										<p class="title text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae assumenda facere libero quisquam, beatae dolores autem ea asperiores illum deleniti. Repudiandae nam at dolorum nostrum soluta, nesciunt culpa ex.</p>
-										<p class="text-right text-light">Fonte: G1</p>
-									</div>	
-									<div class="col-12 text-center">
-										<a href="pages/noticias/pagenoticia.php" class="btn">Ver notícia completa</a>
-									</div>								
-								</div>
-							</div>
-						</div>	
-					</div>
-					<div class="col-lg-12 text-right">
-						<a href="pages/noticias/" class="btn btn-more">Mais notícias</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- <div id="img" class="row" style="background-color: rgb(49, 49, 49)">
-			<div class="col-lg-11 mx-auto py-5">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h3 class="text-uppercase">Parceiros</h3>
-						<hr class="subtitle-line">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-5">
-						
-					</div>
-					
-					
-				</div>
-			</div>
-		</div> -->
-		<!-- <div id="instagram" class="row">
-			<div class="col-lg-11 mx-auto py-5">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h3 class="text-header">VEJA-NOS NO INSTAGRAM</h3>
-						<hr class="subtitle-line">
-					</div>
-					<div class="col-lg-12 px-0 px-lg-5 mt-3 "> 
-						<iframe src="//lightwidget.com/widgets/3766dccb8ece5dc98a68ad03a0225dab.html" scrolling="no" allowtransparency="true" class="lightwidget-widget visible-desk" style="width:100%;border:0;overflow:hidden;"></iframe>
-						<iframe src="//lightwidget.com/widgets/657fd50e70b4542a8f28b7f80754e9b4.html" scrolling="no" allowtransparency="true" class="lightwidget-widget visible-mob" style="width:100%;border:0;overflow:hidden;"></iframe>
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<div id="contato" class="row paralax">
-			<div class="col-lg-11 mx-auto py-5 form-contato">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h3 class="text-header title">CONTATO</h3>
-						<hr class="subtitle-line">
-					</div>
-					<form autocomplete="off" class="col-lg-12 mt-3" action="" method="POST">
-						<div class="row px-lg-3">
-							<div class="col-lg-6">
-								<div class="form-group">
-									<input type="text" name="firstNameTextField" autocomplete="false" autocomplete="off" required="">
-									<label>Seu Nome</label>
-								</div>
-								<div class="form-group">
-									<input type="email" name="emailTextField" autocomplete="false" required="">
-									<label>Email</label>
-								</div>
-								<div class="form-group">
-									<input class="telefone" type="tel" name="lastNameTextField" autocomplete="false" required="">
-									<label>Telefone</label>
-								</div>
-								<div class="form-group">
-									<select>
-										<option></option>
-										<option>Dúvida</option>
-										<option>Comentário</option>
-										<option>Interesse Comercial</option>
-									</select>
-									<label>Assunto</label>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="form-group">
-									<textarea type="text" rows="2"></textarea>
-									<label>Mensagem</label>
-								</div>
-								<div class="form-group">
-									<input type="file" name="img[]" class="file">
-									<div class="input-group">
-										<input type="text" class="browse-input" placeholder="Escolha um arquivo.." disabled="">
-									</div>
-									<div class="btn-group">
-										<button  class="browse btn btn-dark input-lg" type="button"><i class="glyphicon glyphicon-search"></i>Buscar <i class="fas fa-cloud-upload-alt"></i></button>
-										<button style="display: none" class="browse-cancel btn btn-dark input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Cancelar <i class="fas fa-minus-circle"></i></button>
-									</div>
-								</div>
-								<button style="margin-top: 48px;" type="submit" class="btn btn-block btn-submit">Enviar <i class="far fa-paper-plane"></i></button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-
 		<div id="footer" class="row">
 			<div class="col-lg-12 block">
 				<div class="row" style="min-height: 300px">
@@ -552,8 +376,8 @@
 					<div class="col-lg-2 py-5 px-4">
 						<h4>Menu</h4>
 						<div class="mt-4 pl-1 text-left">
-							<p><a href="#"  class="text-muted-footer menus">Home</a></p>
-							<p><a href="#"  class="text-muted-footer menus">Quem Somos</a></p>
+							<p><a href="#"  class="text-muted-footer menus">Home</!--></p>
+							<p><a href="#"  class="text-muted-footer menus">Quem Somos</!--></p>
 							<p><a href="#"  class="text-muted-footer menus">Dúvidas</a></p>
 							<p><a href="#"  class="text-muted-footer menus">Contato</a></p>
 						</div>
@@ -586,19 +410,24 @@
 </div>
 	<script src="assets/js/jquery.js"></script>
 	<!-- <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script> -->
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.js"></script>
 	<script src="assets/js/popper.min.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/plugins/mask/jquery.mask.js"></script>
 	<script src="assets/plugins/fancybox/jquery.fancybox.js"></script>
 	<script src="assets/plugins/fontawesome/js/all.js"></script>
 	<script src="assets/plugins/owl-carousel/js/owl.carousel.js"></script>
-	<!-- <script src="assets/js/aos.js"></script> -->
-	<script type="text/javascript">
-		
 
-  		// AOS.init();
-		
+	<script type="text/javascript">
+	
+		// $(document).ready(function() {
+		// 	$("li.dropdown").hover(() => {
+				
+		// 		// alert($(this).html())
+		// 		$(this).css({'background-color': 'red !important'})
+		// 		// $(this).find('dropdown-menu').addClass('show')
+		// 	})
+		// })
 
 		$('#parceiros .owl-carousel').owlCarousel({
 		    // margin:35,

@@ -20,7 +20,7 @@
 /*	SCROOL BAR */
 ::-webkit-scrollbar {
 	width: 10px;
-	background-color: rgba(0, 0, 0, 0.1);
+
 }
 
 ::-webkit-scrollbar-track {
@@ -153,7 +153,7 @@ textarea:focus {
 /* GLOBALS */
 body{
     /* background: #eeeeee !important; */
-    font-family: 'Roboto Condensed', sans-serif !important;
+    font-family: Verdana, Geneva, sans-serif !important;
 }
 
 button, a.btn {
@@ -190,4 +190,36 @@ a{
 a:hover{
 	text-decoration: none !important;
 	color: inherit;
+}
+
+#footer .block{
+	min-height: 350px; 
+	background-color: #222; 
+	/* box-shadow: 2px 0px 5px #e9ecef;  */
+	color: white;
+}
+
+#footer h4{
+	color: #ce9c6b;
+	font-weight: lighter;
+}
+
+#footer a, #footer p{
+	font-size: 15px;
+	font-weight: lighter;
+	transition: all 0.2s;
+}
+
+#footer a:hover, #footer p:hover{
+	color: #ce9c6b;
+}
+
+#footer .copy{
+	height: 50px;
+	color: #ce9c6b;
+	display: flex;
+	background-color: #09090963;
+	align-items: center; 
+	justify-content: center;
+	font-weight: bold;
 }

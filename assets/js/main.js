@@ -99,9 +99,9 @@ $(document).ready(function($) {
 
 		if (1) {
 			if (prevScrollpos > currentScrollPos) {
-				document.getElementsByClassName("navbar")[0].style.top = "0";
+				document.getElementsByClassName("navbar-mob")[0].style.top = "0";
 			} else {
-				document.getElementsByClassName("navbar")[0].style.top = "-150px";
+				document.getElementsByClassName("navbar-mob")[0].style.top = "-75px";
 			}
 		}
 
